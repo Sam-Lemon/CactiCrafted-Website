@@ -4,9 +4,11 @@ import Col from "react-bootstrap/esm/Col";
 import Card from "react-bootstrap/esm/Card";
 import CardBody from "react-bootstrap/esm/CardBody";
 import CardImg from "react-bootstrap/esm/CardImg";
+import CardText from "react-bootstrap/esm/CardText";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/esm/Image";
-import Input from "react-bootstrap/Input";
+import InputGroup from "react-bootstrap/esm/InputGroup";
+import Form from "react-bootstrap/esm/Form";
 
 
 export function Cart () {
@@ -26,9 +28,9 @@ export function Cart () {
                                     <Col lg="8">
                                         <div className="p-5">
                                             <div className="d-flex justify-content-between align-items-center mb-5">
-                                                <p tag="h1" className="fw-bold mb-0 text-black">
+                                                <h3 className="fw-bold mb-0 text-black">
                                                     Shopping Cart
-                                                </p>
+                                                </h3>
                                                 <p className="mb-0 text-muted">
                                                     3 items
                                                 </p>
@@ -40,7 +42,8 @@ export function Cart () {
                                                 <Col md="2" lg="2" xl="2">
                                                     <CardImg
                                                         src="ATTACH IMAGE FROM API"
-                                                        fluid className="rounded-3"
+                                                        fluid = "true"
+                                                        className="rounded-3"
                                                         alt="ATTACH PLANT NAME FROM API"
                                                     />
                                                 </Col>
@@ -53,22 +56,44 @@ export function Cart () {
                                                     </p>
                                                 </Col>
                                                 <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
+                                                    <InputGroup>
+                                                        <Form.Control
+                                                            placeholder="minus"
+                                                            aria-label="minus"
+                                                            aria-describedby="minus-addon1"
+                                                        />
+
+                                                    
+                                                    </InputGroup>
+                                                    
                                                     <Button color="link" className="px-2">
-                                                        <Image fas icon="minus" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="minus" 
+                                                        />
                                                     </Button>
 
-                                                    <Input type="number" min="0" defaultValue={1} size="sm" />
+                                                    {/* <Input type="number" min="0" defaultValue={1} size="sm" /> */}
 
                                                     <Button color="link" className="px-2">
-                                                        <Image fas icon="plus" />
+                                                        <Image 
+                                                            fas="true"                                                        
+                                                            icon="plus" 
+                                                        />
                                                     </Button>
+
+
+
                                                 </Col>
                                                 <Col md="3" lg="2" xl="2" className="text-end">
-                                                    <h6 classname="mb-0">COST OF SUCCULENT</h6>
+                                                    <h6 className="mb-0">COST OF SUCCULENT</h6>
                                                 </Col>
                                                 <Col md="1" lg="1" xl="1" className="text-end">
                                                     <a href ="#!" className="text-muted">
-                                                        <Image fas icon="times" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="times" 
+                                                        />
                                                     </a>
                                                 </Col> 
                                             </Row>
@@ -79,7 +104,7 @@ export function Cart () {
                                                 <Col md="2" lg="2" xl="2">
                                                     <CardImg
                                                         src="IMG NEEDED HERE"
-                                                        fluid
+                                                        fluid = "true"
                                                         className="rounded-3"
                                                         alt="IMG TITLE"
                                                         />
@@ -90,13 +115,19 @@ export function Cart () {
                                                 </Col>
                                                 <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
                                                     <Button color="link" className="px-2">
-                                                        <Image fas icon="minus" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="minus" 
+                                                        />
                                                     </Button>
 
-                                                    <Input type="number" min="0" defaultValue={1} size="sm" />
+                                                    {/* <Input type="number" min="0" defaultValue={1} size="sm" /> */}
 
                                                     <Button color="link" className="px-2">
-                                                        <Image fas icon="plus" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="plus" 
+                                                        />
                                                     </Button>
                                                 </Col>
                                                 <Col md="3" lg="2" xl="2" className="text-end">
@@ -104,7 +135,10 @@ export function Cart () {
                                                 </Col>
                                                 <Col md="1" lg="1" xl="1" className="text-end">
                                                     <a href="#!" className="text-muted">
-                                                        <Image fas icon="times" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="times" 
+                                                        />
                                                     </a>
                                                 </Col>
                                             </Row>
@@ -115,7 +149,7 @@ export function Cart () {
                                                 <Col md="2" lg="2" xl="2">
                                                     <CardImg    
                                                         src="IMG SOURCE NEEDED"
-                                                        fluid
+                                                        fluid = "true"
                                                         className="rounded-3"
                                                         alt="IMG TITLE HERE"
                                                         />
@@ -126,13 +160,19 @@ export function Cart () {
                                                 </Col>
                                                 <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
                                                     <Button color="link" className="px-2">
-                                                        <Image fas icon ="minus" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon ="minus" 
+                                                        />
                                                     </Button>
 
-                                                    <Input type="number" min="0" defaultValue={1} size="sm" />
+                                                    {/* <Input type="number" min="0" defaultValue={1} size="sm" /> */}
 
                                                     <Button color="link" className="px-2">
-                                                        <Image fas icon="plus" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="plus" 
+                                                        />
                                                     </Button>
                                                 </Col>
                                                 <Col md="3" lg="2" xl="2" className="text-end">
@@ -140,7 +180,10 @@ export function Cart () {
                                                 </Col>
                                                 <Col md="1" lg="1" xl="1" className="text-end">
                                                     <a href="#!" className="text-muted">
-                                                        <Image fas icon="times" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="times" 
+                                                        />
                                                     </a>
                                                 </Col>
                                             </Row>
@@ -150,7 +193,10 @@ export function Cart () {
                                             <div className="pt-5">
                                                 <h6 className="mb-0">
                                                     <CardText tag="a" href="#!" className="text-body">
-                                                        <Image fas icon="long-arrow-alt-left me-2" />
+                                                        <Image 
+                                                            fas="true" 
+                                                            icon="long-arrow-alt-left me-2" 
+                                                        />
                                                         Back to Shop
                                                     </CardText>
                                                 </h6>
@@ -179,9 +225,9 @@ export function Cart () {
                                             <div className="mb-4 pb-2">
                                                 <select className="select p-2 rounded bg-grey" style={{ width: "100%" }}>
                                                     <option value="1">Standard Delivery</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                    <option value="4">Four</option>
+                                                    <option value="2">Fast Standard Delivery</option>
+                                                    <option value="3">Expedited Shipping</option>
+                                                    <option value="4">Overnight Shipping</option>
                                                 </select>
                                             </div>
 
@@ -190,7 +236,7 @@ export function Cart () {
                                             </h5>
 
                                             <div className="mb-5">
-                                                <Input size="lg" label="Enter your code" />
+                                                {/* <Input size="lg" label="Enter your code" /> */}
                                             </div>
 
                                             <hr className="my-4" />
@@ -202,7 +248,7 @@ export function Cart () {
                                                 <h5> PRICE </h5>
                                             </div>
 
-                                            <Button color="dark" block size="lg">
+                                            <Button color="dark" block="true" size="lg">
                                                 Continue
                                             </Button>
                                         </div>
