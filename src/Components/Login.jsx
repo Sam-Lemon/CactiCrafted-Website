@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function Login () {
+export function Login () {
 
     return(
         <Form>
@@ -25,4 +25,3 @@ function Login () {
     );
 }
 
-export default Login;

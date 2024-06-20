@@ -1,4 +1,5 @@
 import React from 'react';
+import { Cart } from './Components/Cart'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Button from 'react-bootstrap/Button';
@@ -14,47 +15,51 @@ import {
 
 export default function App() {
   return (
-    <Container>
-      <Router>
-        <div>
-          <ButtonGroup>
-            <Button variant='outline-danger'>
-              <Link to='/'>Home</Link>
-            </Button>
-            <Button variant='outline-danger'>
-              <Link to='/login'>Login</Link>
-            </Button>
-            <Button variant='outline-danger'>
-              <Link to='/registration'>Registration</Link>
-            </Button>
-            <Button variant='outline-danger'>
-              <Link to='/product-page'>Product</Link>
-            </Button>
-            <Button variant='outline-danger'>
-              <Link to='/cart'>Cart</Link>
-            </Button>
-          </ButtonGroup>
+    <div>
+      <Cart />
 
-          <Switch>
-            <Route path='/'>
-              <Home />
-            </Route>
-            <Route path='/login'>
-              <LoginForm />
-            </Route>
-            <Route path='/registration'>
-              <RegistrationForm />
-            </Route>
-            <Route path='/product-page'>
-              <Product />
-            </Route>
-            <Route path='/cart'>
-              <Cart />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </Container>
+      <Container>
+        <Router>
+          <div>
+            <ButtonGroup>
+              <Button variant='outline-danger'>
+                <Link to='/'>Home</Link>
+              </Button>
+              <Button variant='outline-danger'>
+                <Link to='/login'>Login</Link>
+              </Button>
+              <Button variant='outline-danger'>
+                <Link to='/registration'>Registration</Link>
+              </Button>
+              <Button variant='outline-danger'>
+                <Link to='/product-page'>Product</Link>
+              </Button>
+              <Button variant='outline-danger'>
+                <Link to='/cart'>Cart</Link>
+              </Button>
+            </ButtonGroup>
+
+            <Switch>
+              <Route path='/'>
+                <Home />
+              </Route>
+              <Route path='/login'>
+                <LoginForm />
+              </Route>
+              <Route path='/registration'>
+                <RegistrationForm />
+              </Route>
+              <Route path='/product-page'>
+                <Product />
+              </Route>
+              <Route path='/cart'>
+                <Cart />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </Container>
+    </div>
   );
 }
 
