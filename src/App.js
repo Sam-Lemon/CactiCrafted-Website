@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Login } from './Components/Login';
-// import { Registration } from './Components/Register';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Button from 'react-bootstrap/Button';
@@ -20,19 +18,19 @@ export default function App() {
       <Router>
         <div>
           <ButtonGroup>
-            <Button variant='outline-secondary'>
+            <Button variant='outline-danger'>
               <Link to='/'>Home</Link>
             </Button>
-            <Button variant='outline-secondary'>
+            <Button variant='outline-danger'>
               <Link to='/login'>Login</Link>
             </Button>
-            <Button variant='outline-secondary'>
+            <Button variant='outline-danger'>
               <Link to='/registration'>Registration</Link>
             </Button>
-            <Button variant='outline-secondary'>
+            <Button variant='outline-danger'>
               <Link to='/product-page'>Product</Link>
             </Button>
-            <Button variant='outline-secondary'>
+            <Button variant='outline-danger'>
               <Link to='/cart'>Cart</Link>
             </Button>
           </ButtonGroup>
@@ -42,10 +40,10 @@ export default function App() {
               <Home />
             </Route>
             <Route path='/login'>
-              <Login />
+              <LoginForm />
             </Route>
             <Route path='/registration'>
-              <Registration />
+              <RegistrationForm />
             </Route>
             <Route path='/product-page'>
               <Product />
@@ -64,18 +62,18 @@ function Home() {
   return <h2>Home</h2>
 }
 
-// function Login() {
-//   return <Login />
-// }
+function LoginForm() {
+  return <Login />
+}
 
-// function Registration() {
-//   return <Registration />
-// }
+function RegistrationForm() {
+  return <Register />
+}
 
-// function Product() {
+function Product() {
+  return <ProductPage />
+}
 
-// }
-
-// function Cart () {
-
-// }
+function Cart () {
+  return <Cart />
+}
