@@ -1,47 +1,28 @@
-import React, { useState } from "react";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
-export const Login = (props) => {
-    const [email, setEmail] = useState(' ');
-    const [password, setPassword] = useState(' ');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
-    }
+function Login () {
 
     return(
-        <div className="log-form-container">
-            <h3 className="form-header">Login</h3>
+        <Form>
+            <Form.Group className='mb-3' controlId='formGroupEmail'>
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control type='email' placeholder='Enter Email' />
+            </Form.Group>
+            <Form.Group className='mb-3' controlId='formGroupPassword'>
+                <Form.Label>Password</Form.Label>
+                <Form.Control type='password' placeholder='Enter Password' />
+            </Form.Group>
 
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="email">Email</label>
-                <input 
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
-                    type="email" 
-                    placeholder="email"
-                    id="password"
-                    name="password"
-                    >
-                </input>
+            <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+                <Form.Check type='checkbox' label='Keep me logged in.'/>
+            </Form.Group>
 
-                <label htmlFor="password">Password</label>
-                <input
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    type="password"
-                    placeholder="password"
-                    id="password"
-                    name="password"
-                    >
-                </input>
-
-                <button
-                    className="link-btn"
-                    onClick={() =>props.onFormSwitch('register')}
-                    >Don't have an account? Register here!
-                </button>
-            </form>
-        </div>
+            <Button variant="success" type="submit">
+                Log In
+            </Button>
+        </Form>
     );
 }
+
+export default Login;
