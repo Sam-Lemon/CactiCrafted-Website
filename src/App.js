@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cart } from './Components/Cart'
+import { Cart } from './Pages/Cart'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Container from 'react-bootstrap/Container';
