@@ -2,9 +2,12 @@ import React from 'react';
 import { Cart } from './Components/Cart'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Container from 'react-bootstrap/Container';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
+
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -53,7 +56,7 @@ export default function App() {
                 <Product />
               </Route>
               <Route path='/cart'>
-                <Cart />
+                <CartComp />
               </Route>
             </Switch>
           </div>
@@ -79,6 +82,6 @@ function Product() {
   return <ProductPage />
 }
 
-function Cart () {
+function CartComp () {
   return <Cart />
 }
