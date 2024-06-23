@@ -5,7 +5,9 @@ import LoginForm from "../Components/LoginForm";
 
 export default function LoginPage () {
     const sectionStyle = {
-        backgroundColor: {backgroundImage},
+        backgroundColor: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         height: '100vh',
         display: 'flex',
         justifyContent: 'center',
@@ -37,11 +39,5 @@ export default function LoginPage () {
            
 
     );
-
-
-
-
-
-
 }
 
