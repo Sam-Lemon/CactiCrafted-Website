@@ -1,7 +1,7 @@
 /** NOTES
  * 
  * email and password fields don't clear out correctly after submit
- * need to put in the toggle logic back and forth from registration
+ * 
  * 
  * 
  * 

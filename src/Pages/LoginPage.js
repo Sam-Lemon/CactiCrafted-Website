@@ -1,9 +1,28 @@
-import React from "react";
+/** NOTES
+ * 
+ * fix image, not displaying
+ * finish styling
+ * toggle logic in place, but not sure if correct place
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+import React, { useState } from "react";
 import backgroundImage from '../images/loginSucc.jpg';
 import LoginForm from "../Components/LoginForm";
 
 
 export default function LoginPage () {
+    const [currentForm, setCurrentForm] = useState('login');
+
+    const toggleForm = (formName) => {
+        setCurrentForm(formName);
+        console.log("Current form name: ", formName);
+    }
+
     const sectionStyle = {
         backgroundColor: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -27,7 +46,9 @@ export default function LoginPage () {
                                 </div>
                                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
                                     <div className="card-body p-4 p-lg-5 text-black">
-                                        <LoginForm />
+                                        {
+                                            currentForm === 'login' ? <LoginForm onFormSwitch={toggleForm}/> : <RegForm onFormSwitch={toggleForm} />
+                                        }
                                     </div>
                                 </div>
                             </div>
