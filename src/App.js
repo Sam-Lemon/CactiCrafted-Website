@@ -5,6 +5,7 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
+import LoginPage from './Pages/LoginPage';
 
 
 
@@ -12,15 +13,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch
+  Link
 } from 'react-router-dom';
 
 export default function App() {
   return (
     <div>
-      <Cart />
-
       <Container>
         <Router>
           <div>
@@ -43,21 +41,12 @@ export default function App() {
             </ButtonGroup>
 
             <Switch>
-              <Route path='/'>
-                <Home />
-              </Route>
-              <Route path='/login'>
-                <LoginForm />
-              </Route>
-              <Route path='/registration'>
-                <RegistrationForm />
-              </Route>
-              <Route path='/product-page'>
-                <Product />
-              </Route>
-              <Route path='/cart'>
-                <CartComp />
-              </Route>
+              <Route path='/' exact component={Home}/>
+              <Route path='/login' component={Login}/>
+              <Route path='/registration' component={Register}/> 
+              <Route path='/product-page' component={Product}/>
+              <Route path='/cart' component={CartComp}/>
+                
             </Switch>
           </div>
         </Router>
@@ -70,12 +59,12 @@ function Home() {
   return <h2>Home</h2>
 }
 
-function LoginForm() {
-  return <Login />
+function Login() {
+  return <LoginPage />
 }
 
-function RegistrationForm() {
-  return <Register />
+function Register() {
+  return <RegForm />
 }
 
 function Product() {

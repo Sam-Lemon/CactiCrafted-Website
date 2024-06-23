@@ -1,4 +1,4 @@
-const API_SUCCULENTS = 'https://664ed178fafad45dfae12bcc.mockapi.io/finalProjectSucculents';
+const API_SUCCULENTS = 'https://664ed178fafad45dfae12bcc.mockapi.io/finalProjectSucculents/';
 
 class SuccsApi {  
     
@@ -13,9 +13,21 @@ class SuccsApi {
         }
     }
 
+    getOne = async(id) => {
+        
+            try{
+                const resp = await fetch(API_SUCCULENTS + id);
+                const data = await resp.json();
+                return data;
+            } catch(e) {
+                console.log("Error, fetch didn't fetch", e);
+            }
+        
+    }
+
     put = async (succulent) => {
         try {
-            const resp = await fetch(`${API_SUCCULENTS}/${succulent._id}`, {
+            const resp = await fetch(`${API_SUCCULENTS}${succulent._id}`, {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(succulent)
