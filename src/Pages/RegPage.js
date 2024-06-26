@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RegForm from "../Components/RegForm";
+import LoginPage from "./LoginPage";
 import regImage from '../images/regSucc.jpg';
 
 
@@ -27,7 +28,7 @@ export default function RegPage () {
                                 <div className="col-md-6 col-lg-6 d-flex align-items-center" style={{ backgroundColor: '#b485b3c0',}}>
                                     <div className="card-body p-0 p-lg-5 text-black">
                                         {
-                                            currentForm === 'login' ? <LoginForm onFormSwitch={toggleForm}/> : <RegForm onFormSwitch={toggleForm} />
+                                            currentForm === 'login' ? <LoginPage onFormSwitch={toggleForm}/> : <RegPage onFormSwitch={toggleForm} />
                                         }
                                     </div>
                                 </div>

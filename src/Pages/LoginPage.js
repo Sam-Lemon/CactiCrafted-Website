@@ -10,6 +10,7 @@
 import React, { useEffect, useState } from "react";
 import loginImage from '../images/loginSucc.jpg';
 import LoginForm from "../Components/LoginForm";
+import RegForm from "../Components/RegForm";
 
 
 export default function LoginPage () {
