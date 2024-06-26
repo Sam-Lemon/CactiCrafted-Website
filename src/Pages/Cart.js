@@ -11,11 +11,7 @@ import InputGroup from "react-bootstrap/esm/InputGroup";
 import Form from "react-bootstrap/esm/Form";
 
 
-export function Cart () {
-
-
-
-
+export default function Cart () {
 
     return(
         <section className="h-100 h-custom" style={{ backgroundColor: "#eee"}}>

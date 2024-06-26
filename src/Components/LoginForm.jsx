@@ -43,14 +43,17 @@ export default function LoginForm (props) {
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>
                 <Form.Check type='checkbox' label='Keep me logged in.'/>
             </Form.Group>
+            <div className='text-center'>
+                <Button className=' login-btn' type="submit">
+                    Log In
+                </Button>
+            </div>
+            <div className='text-center'>
+                <Button className='text-center' variant='link' onClick={(e) => props.onFormSwitch('register')}>
+                    Don't have an account? Register here.
+                </Button>
+            </div> 
 
-            <Button className='text-center' variant="success" type="submit">
-                Log In
-            </Button>
-
-            <Button className='text-center' variant='link' onClick={(e) => props.onFormSwitch('register')}>
-                Don't have an account? Register here.
-            </Button>
         </Form>
     );
 }

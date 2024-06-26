@@ -21,7 +21,7 @@ export default function RegForm (props) {
     };
 
     return(
-        <Form className='login-form' onSubmit={handleSubmit}>
+        <Form className='reg-form' onSubmit={handleSubmit}>
             <h3 className='text-center'>Register</h3>
             <Form.Group className='mb-3' controlId='formGroupFirstName'>
                 <Form.Label>First Name</Form.Label>
@@ -40,14 +40,18 @@ export default function RegForm (props) {
                 <Form.Control type='password' onChange={(e) => setPassword(e.target.value)} />
             </Form.Group>
 
+            <div className='text-center'>
+                <Button className=' login-btn' type="submit">
+                    Register
+                </Button>
+            </div>
+            <div className='text-center'>
+                <Button variant='link' onClick={(e) => props.onFormSwitch('login')}>
+                    Have an account? Login here.
+                </Button>
 
-            <Button variant="success" type="submit">
-                Register
-            </Button>
+            </div>
 
-            <Button variant='link' onClick={(e) => props.onFormSwitch('login')}>
-                Have an account? Login here.
-            </Button>
         </Form>
     );
 }

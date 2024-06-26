@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import backgroundImage from '../images/loginSucc.jpg';
 import RegForm from "../Components/RegForm";
+import regImage from '../images/regSucc.jpg';
 
 
 export default function RegPage () {
@@ -11,29 +11,21 @@ export default function RegPage () {
         console.log("Current form name: ", formName);
     }
 
-    const sectionStyle = {
-        backgroundColor: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    };
-    
-
     return (
-        <section className="main" style={sectionStyle}>
-            <div className="container py-5 h-100">
-                <div className="row d-flex justify-content-center align-items-center h-100">
-                    <div className="col col-xl-10">
-                        <div className="card" style={{ borderRadius: '1rem' }}>
-                            <div className="row g-0">
-                                <div className="col-md-6 col-lg-5 d-none d-md-block">
-                                    <img src="../images/loginSucc.jpg" alt="pot of multi-colored succulents" className="img-fluid" style={{ borderRadius: '1rem 0 0 1rem'}} />
+        <section className="main">
+            <div className="container py-5 h-100 w-90">
+                <div className="row d-flex justify-content-center align-items-center h-100 ">
+                        <div className="card p-0" style={{ borderRadius: '1rem' }}>
+                            <div className="row g-0" style={{ border: '.75rem double #905175', borderRadius: '1rem' }}>
+                                <div className="col-md-6 col-lg-6 d-none d-md-block"
+                                    style={{
+                                        backgroundImage: `url(${regImage})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                         }}>
                                 </div>
-                                <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                                    <div className="card-body p-4 p-lg-5 text-black">
+                                <div className="col-md-6 col-lg-6 d-flex align-items-center" style={{ backgroundColor: '#b485b3c0',}}>
+                                    <div className="card-body p-0 p-lg-5 text-black">
                                         {
                                             currentForm === 'login' ? <LoginForm onFormSwitch={toggleForm}/> : <RegForm onFormSwitch={toggleForm} />
                                         }
@@ -43,10 +35,7 @@ export default function RegPage () {
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
-           
-
     );
 }
 
