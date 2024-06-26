@@ -1,7 +1,7 @@
 /** NOTES
  * 
  * email and password fields don't clear out correctly after submit
- * 
+ * link to registration page
  * 
  * 
  * 
@@ -30,25 +30,25 @@ export default function LoginForm (props) {
 
     return(
         <Form className='login-form' onSubmit={handleSubmit}>
-            <h3 className='form-header'>Login</h3>
+            <h3 className="text-center">Login</h3>
             <Form.Group className='mb-3' controlId='formGroupEmail'>
                 <Form.Label>Email Address</Form.Label>
-                <Form.Control type='email' placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} />
+                <Form.Control type='email' onChange={(e) => setEmail(e.target.value)} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formGroupPassword'>
                 <Form.Label>Password</Form.Label>
-                <Form.Control type='password' placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
+                <Form.Control type='password' onChange={(e) => setPassword(e.target.value)} />
             </Form.Group>
 
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>
                 <Form.Check type='checkbox' label='Keep me logged in.'/>
             </Form.Group>
 
-            <Button variant="success" type="submit">
+            <Button className='text-center' variant="success" type="submit">
                 Log In
             </Button>
 
-            <Button variant='link'>
+            <Button className='text-center' variant='link' onClick={(e) => props.onFormSwitch('register')}>
                 Don't have an account? Register here.
             </Button>
         </Form>

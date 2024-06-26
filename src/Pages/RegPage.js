@@ -1,20 +1,52 @@
-import Form from 'react-bootstrap/Form';
+import React, { useState } from "react";
+import backgroundImage from '../images/loginSucc.jpg';
+import RegForm from "../Components/RegForm";
 
-export function Register () {
 
-    return(
-        <Form>
+export default function RegPage () {
+    const [currentForm, setCurrentForm] = useState('register');
 
-            
-            <Form.Group className='mb-3' controlId='formGroupEmail'>
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control type='email' placeholder='Email' />
-            </Form.Group>
+    const toggleForm = (formName) => {
+        setCurrentForm(formName);
+        console.log("Current form name: ", formName);
+    }
 
-            <Form.Group className='mb-3' controlId='formGroupPassword'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control type='email' placeholder='Create a Password' />
-            </Form.Group>
-        </Form>
+    const sectionStyle = {
+        backgroundColor: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    };
+    
+
+    return (
+        <section className="main" style={sectionStyle}>
+            <div className="container py-5 h-100">
+                <div className="row d-flex justify-content-center align-items-center h-100">
+                    <div className="col col-xl-10">
+                        <div className="card" style={{ borderRadius: '1rem' }}>
+                            <div className="row g-0">
+                                <div className="col-md-6 col-lg-5 d-none d-md-block">
+                                    <img src="../images/loginSucc.jpg" alt="pot of multi-colored succulents" className="img-fluid" style={{ borderRadius: '1rem 0 0 1rem'}} />
+                                </div>
+                                <div className="col-md-6 col-lg-7 d-flex align-items-center">
+                                    <div className="card-body p-4 p-lg-5 text-black">
+                                        {
+                                            currentForm === 'login' ? <LoginForm onFormSwitch={toggleForm}/> : <RegForm onFormSwitch={toggleForm} />
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+           
+
     );
 }
+

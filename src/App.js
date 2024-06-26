@@ -1,11 +1,13 @@
 import React from 'react';
 import { Cart } from './Pages/Cart'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import Container from 'react-bootstrap/Container';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import LoginPage from './Pages/LoginPage';
+import RegPage from './Pages/RegPage';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
 
 
 
@@ -23,19 +25,19 @@ export default function App() {
         <Router>
           <div>
             <ButtonGroup>
-              <Button variant='outline-danger'>
+              <Button variant='outline-primary'>
                 <Link to='/'>Home</Link>
               </Button>
-              <Button variant='outline-danger'>
+              <Button variant='outline-primary'>
                 <Link to='/login'>Login</Link>
               </Button>
-              <Button variant='outline-danger'>
+              <Button variant='outline-primary'>
                 <Link to='/registration'>Registration</Link>
               </Button>
-              <Button variant='outline-danger'>
+              <Button variant='outline-primary'>
                 <Link to='/product-page'>Product</Link>
               </Button>
-              <Button variant='outline-danger'>
+              <Button variant='outline-primary'>
                 <Link to='/cart'>Cart</Link>
               </Button>
             </ButtonGroup>
@@ -64,7 +66,7 @@ function Login() {
 }
 
 function Register() {
-  return <RegForm />
+  return <RegPage />
 }
 
 function Product() {
@@ -74,3 +76,8 @@ function Product() {
 function CartComp () {
   return <Cart />
 }
+
+
+
+
+

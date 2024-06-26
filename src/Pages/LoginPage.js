@@ -2,7 +2,6 @@
  * 
  * fix image, not displaying
  * finish styling
- * toggle logic in place, but not sure if correct place
  * 
  * 
  * 
