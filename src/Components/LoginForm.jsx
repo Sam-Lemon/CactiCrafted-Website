@@ -1,7 +1,7 @@
 /** NOTES
  * 
  * email and password fields don't clear out correctly after submit
- * link to registration page
+ * on click the submit button turns blue
  * 
  * 
  * 
@@ -49,7 +49,7 @@ export default function LoginForm (props) {
                 </Button>
             </div>
             <div className='text-center'>
-                <Button className='text-center' variant='link' onClick={(e) => props.onFormSwitch('register')}>
+                <Button className='link-btn' variant='link' onClick={(e) => props.onFormSwitch('register')}>
                     Don't have an account? Register here.
                 </Button>
             </div> 

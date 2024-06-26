@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import LoginPage from './Pages/LoginPage';
 import RegPage from './Pages/RegPage';
 import Cart from './Pages/Cart';
+import Footer from './Components/Footer';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -35,9 +36,6 @@ export default function App() {
                 <Link to='/registration'>Register</Link>
               </Button>
               <Button variant='outline-primary'>
-                <Link to='/product-page'>Product</Link>
-              </Button>
-              <Button variant='outline-primary'>
                 <Link to='/cart'>Cart</Link>
               </Button>
             </ButtonGroup>
@@ -46,13 +44,15 @@ export default function App() {
               <Route path='/' exact component={Home}/>
               <Route path='/login' component={Login}/>
               <Route path='/registration' component={Register}/> 
-              <Route path='/product-page' component={Product}/>
               <Route path='/cart' component={CartComp}/>
                 
             </Switch>
           </div>
         </Router>
       </Container>
+
+      <hr />
+      <Footer />
     </div>
   );
 }
@@ -67,10 +67,6 @@ function Login() {
 
 function Register() {
   return <RegPage />
-}
-
-function Product() {
-  return <ProductPage />
 }
 
 function CartComp () {

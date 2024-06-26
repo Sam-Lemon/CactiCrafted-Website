@@ -1,3 +1,10 @@
+/*******Login/Registration Components*******/
+.link-btn {
+   text-decoration: none;
+   color: #905175;
+   text-align: center;
+}
+
 
 /*******LoginForm Component*******/
 .login-form, .reg-form {
@@ -14,4 +21,36 @@
    border: 2.5px solid #905175;
 }
 
+.login-btn:hover, .reg-btn:hover {
+   background-color: #905175;
+   color: #F7F3F9;
+   border-color: #F7F3F9;
+}
+
+.login-btn:active, .reg-btn:active {
+   background-color: red;
+}
+
+
+/*******NewsletterForm Component*******/
+.newsletter-signup {
+   background-color: red;
+}
+
+/*******FooterMain Component*******/
+.footer-main {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.footer-list {
+   list-style-type: none;
+   justify-content: start;
+}
+
+.footer-container {
+   display: flex;
+   justify-content: space-between;
+}
 

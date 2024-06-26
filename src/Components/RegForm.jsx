@@ -1,3 +1,15 @@
+/** NOTES
+ * 
+ * email and password fields don't clear out correctly after submit
+ * on click the submit button turns blue
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
+
+
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -46,7 +58,7 @@ export default function RegForm (props) {
                 </Button>
             </div>
             <div className='text-center'>
-                <Button variant='link' onClick={(e) => props.onFormSwitch('login')}>
+                <Button className='link-btn' variant='link' onClick={(e) => props.onFormSwitch('login')}>
                     Have an account? Login here.
                 </Button>
 

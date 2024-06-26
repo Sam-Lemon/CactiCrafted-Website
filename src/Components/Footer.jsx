@@ -1,11 +1,15 @@
 import React from "react";
+import Newsletter from "./Newsletter";
+import FooterMain from "./FooterMain";
+import FooterSocial from "./FooterSocial";
 
 function Footer () {
     return(
-        <div className="footer-container">
-                <p>© 2024. Sam Lemon. All Rights Reserved</p>
-                <p>ALL SOCIALS</p>
-                <p>Terms & Conditions | Privacy Policy</p>
+        <div className="footer">
+            <Newsletter />
+            <FooterMain />
+            <FooterSocial />
+
         </div>
     );
 }
