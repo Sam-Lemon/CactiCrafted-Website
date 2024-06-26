@@ -24,9 +24,9 @@ export default function AppRouterComp () {
             <Router>
                 <div>
                     <ButtonGroup>
-                    <Button variant='outline-primary'>
+                    {/* <Button variant='outline-primary'>
                         <Link to='/'>Home</Link>
-                    </Button>
+                    </Button> */}
                     <Button variant='outline-primary'>
                         <Link to='/login'>Login</Link>
                     </Button>
@@ -39,7 +39,7 @@ export default function AppRouterComp () {
                     </ButtonGroup>
 
                     <Switch>
-                    <Route path='/' exact component={Home}/>
+                    {/* <Route path='/' exact component={Home}/> */}
                     <Route path='/login' component={Login}/>
                     <Route path='/registration' component={Register}/> 
                     <Route path='/cart' component={CartComp}/>
@@ -51,9 +51,9 @@ export default function AppRouterComp () {
     );
 }
 
-function Home() {
-    return <HomePage />
-  }
+// function Home() {
+//     // return <HomePage />
+//   }
   
   function Login() {
     return <LoginPage />

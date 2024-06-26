@@ -9,19 +9,22 @@ export default function ImgTable () {
             <Table>
                 <tbody>
                     <tr>
+                        <td>Testing col 1</td>
+                        {/* <td><ProductCard /></td>
                         <td><ProductCard /></td>
-                        <td><ProductCard /></td>
-                        <td><ProductCard /></td>
+                        <td><ProductCard /></td> */}
                     </tr>
                     <tr>
+                        <td>Testing col 2</td>
+                        {/* <td><ProductCard /></td>
                         <td><ProductCard /></td>
-                        <td><ProductCard /></td>
-                        <td><ProductCard /></td>
+                        <td><ProductCard /></td> */}
                     </tr>
                     <tr>
+                        <td>Testing col 3</td>
+                        {/* <td><ProductCard /></td>
                         <td><ProductCard /></td>
-                        <td><ProductCard /></td>
-                        <td><ProductCard /></td>
+                        <td><ProductCard /></td> */}
                     </tr>
                 </tbody>
 

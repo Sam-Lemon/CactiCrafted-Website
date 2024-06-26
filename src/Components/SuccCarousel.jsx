@@ -15,7 +15,7 @@ export default function SuccCarousel () {
 
     return (
         <Carousel>
-            <Carousel.Item>
+            {/* <Carousel.Item>
                 <ExampleCarouselImage text="First Slide" />
                 <Carousel.Caption>
                     <h3>First slide label</h3>
@@ -35,7 +35,7 @@ export default function SuccCarousel () {
                     <h3>Third slide label</h3>
                     <p>hardyharharhar</p>
                 </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
         </Carousel>
 
     );
