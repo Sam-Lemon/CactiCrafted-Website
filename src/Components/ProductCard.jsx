@@ -5,26 +5,26 @@ import { Card, Button } from 'react-bootstrap/';
 
 
 export default function ProductCard ({succulents}) {
-
+    console.log(succulents);
     if (!succulents) {
         return <div>No succulents available</div>;
     }
 
     return(
         <>
-            {succulents.map((succulent, index) => (
-                <Card key={index} style={{ width: '18rem', marginBottom: '20px' }}>
-                    <Card.Img variant="top" src={succulent.img} />
+
+                <Card key={succulents.id} style={{ marginBottom: '20px' }}>
+                    <Card.Img variant="top" src={succulents.imgURL} />
                     <Card.Body>
-                        <Card.Title>{succulent.scientificName}</Card.Title>
+                        <Card.Title>{succulents.scientificName}</Card.Title>
                         <Card.Text>
-                            Name: {succulent.name} <br />
-                            Price: ${succulent.price}
+                            Name: {succulents.name} <br />
+                            Price: ${succulents.price}
                         </Card.Text>
-                        <Button variant="success" onClick={() => handleAddToCart(succulent)}>Add to Cart</Button>
+                        <Button variant="success" onClick={() => handleAddToCart(succulents)}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
-            ))}
+
         </>
         );
     }
@@ -33,9 +33,3 @@ export default function ProductCard ({succulents}) {
         //ADD LOGIC to put into card component
         console.log(`Added ${succulent.name} to cart`);
     };
-
-
-
-
-
-
