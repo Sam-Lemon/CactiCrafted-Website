@@ -12,6 +12,15 @@ a {
    color: black;
 }
 
+.succ-banner {
+   height: 20rem;
+}
+
+/*******NavBar Component*******/
+.nav-links {
+   margin-right: none;
+}
+
 /*******Login/Registration Components*******/
 .link-btn {
    text-decoration: none;

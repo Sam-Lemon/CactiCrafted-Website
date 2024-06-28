@@ -13,7 +13,7 @@ export default function NavBar() {
                 <Navbar.Brand>
                     <LogoImage />
                 </Navbar.Brand>
-                <Nav className="me-auto">
+                <Nav className="nav-links">
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#login">Login</Nav.Link>
                     <Nav.Link href="#cart">Cart</Nav.Link>

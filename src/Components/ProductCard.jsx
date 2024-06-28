@@ -21,12 +21,17 @@ export default function ProductCard ({succulents}) {
                             Name: {succulent.name} <br />
                             Price: ${succulent.price}
                         </Card.Text>
-                        <Button variant="success">Add to Cart</Button>
+                        <Button variant="success" onClick={() => handleAddToCart(succulent)}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
             ))}
         </>
         );
+    }
+
+    const handleAddToCart = (succulent) => {
+        //ADD LOGIC to put into card component
+        console.log(`Added ${succulent.name} to cart`);
     };
 
 

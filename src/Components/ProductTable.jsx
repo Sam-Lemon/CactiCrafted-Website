@@ -19,19 +19,35 @@ export default function ProductTable () {
         fetchSucculents();
     }, []);
 
+    const limitedSucculents = succulents.slice(0, 9);
+
+    const renderGrid = () => {
+        let rows = [];
+        for (let i = 0; i < 3; i++) {
+            let cells = [];
+            for (let j = 0; j < 3; j++) {
+                const index = i * 3 + j;
+                if (index < limitedSucculents.length) {
+                    cells.push(
+                        <td key={index}>
+                            <ProductCard succulent={limitedSucculents[index]} />
+                        </td>
+                    );
+                } else {
+                    cells.push(<td key={index}></td>);
+                }
+            }
+            rows.push(<tr key={i}>{cells}</tr>);
+        }
+        return rows;
+    };
+
     return (
         <Table bordered>
             <tbody>
-                {succulents.map((succulent, index) => {
-                    <tr key={index}>
-                        <td>
-                            <ProductCard  succulent={succulent} />
-                        </td>
-                    </tr>
-                    } 
-                )}
+                {renderGrid()}
             </tbody>
         </Table>
     );
-};
+}
 
