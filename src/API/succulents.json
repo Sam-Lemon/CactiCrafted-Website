@@ -1,0 +1,184 @@
+[
+    {
+      "name": "Calico Hearts",
+      "scientificName": "Adromischus triflorus",
+      "price": 10.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1693/29186/calico_hearts_6__02262.1716409345.jpg?c=3",
+      "id": "1"
+    },
+    {
+      "name": "Marloth’s Adromischus",
+      "scientificName": "Andromischus filicaulis ssp. marlothii",
+      "price": 6.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/2177/7422/adromischus_marlothii__12482.1649269860.jpg?c=3",
+      "id": "2"
+    },
+    {
+      "name": "Crinkle-Leaf Plant",
+      "scientificName": "Adromischus cristatus",
+      "price": 9.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/4553/16669/crinkle_leaf_plant__24566.1695925088.jpg?c=3",
+      "id": "3"
+    },
+    {
+      "name": "Black Rose",
+      "scientificName": "Aeonium arboreum",
+      "price": 6.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1066/9799/black_rose__78411.1709577295.jpg?c=3",
+      "id": "4"
+    },
+    {
+      "name": "Atropurpureum",
+      "scientificName": "Aeonium arboreum",
+      "price": 5.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/5614/26028/aeonium_apupotoreum2__35386.1716506901.jpg?c=3",
+      "id": "5"
+    },
+    {
+      "name": "Mountain Rose",
+      "scientificName": "Aeonium dodrantale",
+      "price": 15.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/6093/28749/mountain_rose_large_5__53936.1712877701.jpg?c=3",
+      "id": "6"
+    },
+    {
+      "name": "Silver Star",
+      "scientificName": "Agave demeesteriana",
+      "price": 11.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/6120/26793/aga_demeesterian_2__80336.1710443353.jpg?c=3",
+      "id": "7"
+    },
+    {
+      "name": "Quadricolor",
+      "scientificName": "Agave lophantha",
+      "price": 12.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/6942/28784/agave_quadricolor_2__98082.1714083594.jpg?c=3",
+      "id": "8"
+    },
+    {
+      "name": "Bear's Paw",
+      "scientificName": "Cotyledon tomentosa",
+      "price": 5.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1288/956/cotyledon-bears-paw__44128.1655326481.jpg?c=3",
+      "id": "9"
+    },
+    {
+      "name": "Oophylla",
+      "scientificName": "Cotyledon orbiculata",
+      "price": 9.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/5098/25470/cot_oophylla2__11470.1718200086.jpg?c=3",
+      "id": "10"
+    },
+    {
+      "name": "Alpenglow",
+      "scientificName": "Graptosedum 'Alpenglow'",
+      "price": 5.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1455/6739/alpenglow__37676.1709580425.jpg?c=3",
+      "id": "11"
+    },
+    {
+      "name": "California Sunset",
+      "scientificName": "Graptosedum 'California Sunset'",
+      "price": 6.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1407/17524/california_sunset__12330.1717010880.jpg?c=3",
+      "id": "12"
+    },
+    {
+      "name": "Chocolate Soldier",
+      "scientificName": "Kalanchoe tomentosa",
+      "price": 3.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1222/9031/chocolate_soldier__22963.1656425549.jpg?c=3",
+      "id": "13"
+    },
+    {
+      "name": "Snow White Panda Plant",
+      "scientificName": "Kalanchoe eriophylla",
+      "price": 8.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/3269/9253/snowy_panda_plant__75569.1655327661.jpg?c=3",
+      "id": "14"
+    },
+    {
+      "name": "Fang",
+      "scientificName": "Kalanchoe beharensis",
+      "price": 6.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1641/2086/kalanchoe_beharensis_Fang__36303.1645827314.jpg?c=3",
+      "id": "15"
+    },
+    {
+      "name": "Dunce Cap",
+      "scientificName": "Orostachys fimbriata",
+      "price": 7.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/5591/25920/oro_fimbriata__45856.1718200967.jpg?c=3",
+      "id": "16"
+    },
+    {
+      "name": "Pink Moonstone",
+      "scientificName": "Pachyphytum oviferum",
+      "price": 7.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/2465/29168/pink_moonstones_4__51963.1716317441.jpg?c=3",
+      "id": "17"
+    },
+    {
+      "name": "Little Jewel",
+      "scientificName": "Pachyphytum compactum",
+      "price": 10.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1719/2258/pachyphytum_compactum__76225.1652984709.jpg?c=3",
+      "id": "18"
+    },
+    {
+      "name": "Happy Bean",
+      "scientificName": "Peperomia ferreyrae",
+      "price": 6.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1257/14595/peperomia_ferreyrae__97795.1635792415.jpg?c=3",
+      "id": "19"
+    },
+    {
+      "name": "Ruby Glow",
+      "scientificName": "Peperomia graveolens",
+      "price": 13.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/4808/18002/peperomia_graveolens__30751.1651160740.jpg?c=3",
+      "id": "20"
+    },
+    {
+      "name": "Emerald Spring",
+      "scientificName": "Sempervivum globiferum ssp. hirtum",
+      "price": 8.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/888/3797/jovibarba-hirta-emerald-spring__23881.1712854166.jpg?c=3",
+      "id": "21"
+    },
+    {
+      "name": "Hedgehog",
+      "scientificName": "sempervivum globiferum ssp. hirtum",
+      "price": 8.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/895/8374/semp_hedgehog__71544.1717707969.jpg?c=3",
+      "id": "22"
+    },
+    {
+      "name": "Cebenese",
+      "scientificName": "Sempervivum arachnoideum",
+      "price": 5.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/970/24396/semp_cebenese_4__91026.1710457663.jpg?c=3",
+      "id": "23"
+    },
+    {
+      "name": "String of Tears",
+      "scientificName": "Senecio herreanus",
+      "price": 6.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1170/8461/string_of_raindrops_3__06548.1655325519.jpg?c=3",
+      "id": "24"
+    },
+    {
+      "name": "String of Pearls",
+      "scientificName": "Senecio rowleyanus",
+      "price": 5.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1158/5714/string_o_pearls__29956.1636574126.jpg?c=3",
+      "id": "25"
+    },
+    {
+      "name": "Blue Chalksticks",
+      "scientificName": "Senecio mandraliscae",
+      "price": 5.49,
+      "imgURL": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/631x631/products/1061/1170/senecio_serpens_blue_chalk_fingers__19040.1651161665.jpg?c=3",
+      "id": "26"
+    }
+  ]
