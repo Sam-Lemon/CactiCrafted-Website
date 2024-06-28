@@ -1,20 +1,9 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Button from 'react-bootstrap/Button';
-// import HomePage from '../Pages/HomePage';
+import { Container, ButtonGroup, Button } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LoginPage from '../Pages/LoginPage';
 import RegPage from '../Pages/RegPage';
 import Cart from '../Pages/Cart';
-
-
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from 'react-router-dom';
 
 
 export default function AppRouterComp () {
@@ -24,9 +13,9 @@ export default function AppRouterComp () {
             <Router>
                 <div>
                     <ButtonGroup>
-                    {/* <Button variant='outline-primary'>
+                    <Button variant='outline-primary'>
                         <Link to='/'>Home</Link>
-                    </Button> */}
+                    </Button>
                     <Button variant='outline-primary'>
                         <Link to='/login'>Login</Link>
                     </Button>
@@ -39,11 +28,10 @@ export default function AppRouterComp () {
                     </ButtonGroup>
 
                     <Switch>
-                    {/* <Route path='/' exact component={Home}/> */}
-                    <Route path='/login' component={Login}/>
-                    <Route path='/registration' component={Register}/> 
-                    <Route path='/cart' component={CartComp}/>
-                        
+                        <Route path='/' exact component={Home}/>
+                        <Route path='/login' component={Login}/>
+                        <Route path='/registration' component={Register}/> 
+                        <Route path='/cart' component={CartComp}/>
                     </Switch>
                 </div>
             </Router>
@@ -51,19 +39,19 @@ export default function AppRouterComp () {
     );
 }
 
-// function Home() {
-//     // return <HomePage />
-//   }
+function Home() {
+    return <h1>Welcome to the Home Page</h1>;
+  }
   
   function Login() {
-    return <LoginPage />
+    return <LoginPage />;
   }
   
   function Register() {
-    return <RegPage />
+    return <RegPage />;
   }
   
   function CartComp () {
-    return <Cart />
+    return <Cart />;
   }
   

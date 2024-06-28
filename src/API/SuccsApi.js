@@ -1,4 +1,4 @@
-const API_SUCCULENTS = 'https://664ed178fafad45dfae12bcc.mockapi.io/finalProjectSucculents/';
+const API_SUCCULENTS = 'https://667e89e5f2cb59c38dc617c6.mockapi.io/succulents';
 
 class SuccsApi {  
     
@@ -10,6 +10,7 @@ class SuccsApi {
             return data;
         } catch(e) {
             console.log("Error, fetch didn't fetch", e);
+            throw e;
         }
     }
 
@@ -23,6 +24,7 @@ class SuccsApi {
             return await resp.json();
         } catch(e) {
             console.log("Put ain't puttin", e);
+            throw e;
         }
     }
 }
