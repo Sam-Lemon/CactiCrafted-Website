@@ -1,18 +1,22 @@
-import React from 'react';
-// import HomePage from './Pages/HomePage';
+import React, { useEffect } from 'react';
+import HomePage from './Pages/HomePage';
 import AppRouterComp from './API/AppRouterComp';
 import NavBar from './Components/NavBar';
 import DropNavBar from './Components/DropNavBar';
 import SuccCarousel from './Components/SuccCarousel';
-import ImgTable from './Components/ImgTable';
+import ProductTable from './Components/ProductTable';
 import Footer from './Components/Footer';
 import banner_succs from './images/banner-succs.jpeg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import ProductCard from './Components/ProductCard';
 
 export default function App() {
+  useEffect(() => {document.body.style.backgroundColor = '#E8E5E5'})
+
   return (
     <>
+      <ProductCard />
         <NavBar />
         <div className='succ-banner' 
           style={{
@@ -25,9 +29,10 @@ export default function App() {
         </div>
         </div>
         <DropNavBar />
-        <SuccCarousel />
-        <ImgTable />
         <AppRouterComp />
+        <SuccCarousel />
+        <ProductTable />
+        <hr />
         <Footer />
     </>
   );

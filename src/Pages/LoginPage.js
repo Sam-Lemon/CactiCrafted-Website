@@ -7,7 +7,7 @@
  */
 
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import loginImage from '../images/loginSucc.jpg';
 import LoginForm from "../Components/LoginForm";
 import RegForm from "../Components/RegForm";
@@ -21,7 +21,6 @@ export default function LoginPage () {
         console.log("Current form name: ", formName);
     }
 
-    useEffect(() => {document.body.style.backgroundColor = '#ACC6D8'})
 
     
 

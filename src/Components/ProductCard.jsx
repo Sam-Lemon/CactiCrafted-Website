@@ -1,27 +1,36 @@
 //this is going to be the basic card, image, plant name,
 //link to go to the product page
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Card, Button } from 'react-bootstrap/';
 
 
-export default function ProductCard () {
+export default function ProductCard ({succulents}) {
+
+    if (!succulents) {
+        return <div>No succulents available</div>;
+    }
 
     return(
         <>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="IMG FROM ARRAY OBJ" />
-                <Card.Body>
-                    <Card.Title>PLANT NAME</Card.Title>
-                    <Card.Text>
-                        PLANT PRICE
-                    </Card.Text>
-                    <Button variant="success">Add to Cart</Button>
-                </Card.Body>
-            </Card>
-        
-        
-        
+            {succulents.map((succulent, index) => (
+                <Card key={index} style={{ width: '18rem', marginBottom: '20px' }}>
+                    <Card.Img variant="top" src={succulent.img} />
+                    <Card.Body>
+                        <Card.Title>{succulent.scientificName}</Card.Title>
+                        <Card.Text>
+                            Name: {succulent.name} <br />
+                            Price: ${succulent.price}
+                        </Card.Text>
+                        <Button variant="success">Add to Cart</Button>
+                    </Card.Body>
+                </Card>
+            ))}
         </>
-    );
-}
+        );
+    };
+
+
+
+
+
+

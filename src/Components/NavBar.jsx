@@ -12,7 +12,6 @@ export default function NavBar() {
             <Container>
                 <Navbar.Brand>
                     <LogoImage />
-                    Logo
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="#home">Home</Nav.Link>

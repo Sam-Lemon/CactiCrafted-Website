@@ -1,3 +1,17 @@
+body {
+   background-color: #E8E5E5;
+}
+
+.logoImg {
+   display: flex;
+   justify-content: center;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
 /*******Login/Registration Components*******/
 .link-btn {
    text-decoration: none;
@@ -66,10 +80,6 @@
 }
 
 /*******FooterMain Component*******/
-#footer-table {
-   background-color: hotpink;
-}
-
 thead {
    font-size: medium;
 }
@@ -82,15 +92,26 @@ thead {
 /*******Socials Component*******/
 .footer-container {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
 }
 
 .social-icons {
    display: flex;
    flex-direction: row;
+   margin-left: 1rem;
+   margin-right: 1rem;
 }
 
 .social-link {
    margin: 5px;
    font-size: large;
+}
+
+.terms-privacy {
+   display: flex;
+   flex-direction: row;
+}
+
+.terms-privacy p {
+   margin-right: .5rem;
 }
