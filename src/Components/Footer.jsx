@@ -1,14 +1,14 @@
 import React from "react";
 import Newsletter from "./Newsletter";
 import FooterMain from "./FooterMain";
-import FooterSocial from "./FooterSocial";
+import Socials from "./Socials";
 
 function Footer () {
     return(
         <div className="footer">
             <Newsletter />
             <FooterMain />
-            <FooterSocial />
+            <Socials />
 
         </div>
     );

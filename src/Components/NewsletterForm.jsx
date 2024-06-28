@@ -24,14 +24,14 @@ export default function NewsletterSignup () {
     return (
         <>
             <Form className="newsletter-signup" onSubmit={handleSubmit}>
-                <Form.Group>
+                <Form.Group className="news-input-name">
                     <Form.Control type='name' placeholder='Name' onChange={(e) => setNewsName(e.target.value)} />
                 </Form.Group>
-                <Form.Group>
+                <Form.Group className="new-input-email">
                     <Form.Control type='email' placeholder='Email' onChange={(e) => setNewsEmail(e.target.value)} />
                 </Form.Group>
                 <Form.Group className='text-center'>
-                    <Button className='text-center' type='submit'>Join List</Button>
+                    <Button className='news-btn text-center' type='submit'>Join List</Button>
                 </Form.Group>
             </Form>
         </>

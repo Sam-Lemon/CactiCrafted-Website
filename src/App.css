@@ -31,26 +31,66 @@
    background-color: red;
 }
 
+/*****FOOTER*****/
+.footer {
+   font-size: small;
+}
 
 /*******NewsletterForm Component*******/
+.footer-newsletter {
+   background-color: rgb(232, 229, 229);
+}
+
 .newsletter-signup {
-   background-color: red;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.newsletter-header h3 {
+   margin: auto;
+}
+
+.newsletter-header p {
+   margin: auto;
+}
+
+.news-input-name, .new-input-email {
+   max-width: 20rem;
+   margin-right: 3px;
+}
+
+.news-btn {
+   background-color: maroon;
+   margin-bottom: 5px;
 }
 
 /*******FooterMain Component*******/
-.footer-main {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
+#footer-table {
+   background-color: hotpink;
 }
 
-.footer-list {
-   list-style-type: none;
-   justify-content: start;
+thead {
+   font-size: medium;
 }
 
+.links {
+   color: black;
+   text-decoration: none;
+}
+
+/*******Socials Component*******/
 .footer-container {
    display: flex;
    justify-content: space-between;
 }
 
+.social-icons {
+   display: flex;
+   flex-direction: row;
+}
+
+.social-link {
+   margin: 5px;
+   font-size: large;
+}

@@ -1,46 +1,52 @@
 import React from "react";
 import LogoImg from './LogoImg';
+import Table from 'react-bootstrap/Table';
 
 
 export default function FooterMain () {
 
     return(
         <>
+        <Table className="text-center table-borderless" id="footer-table">
+           <thead>
+                <tr>
+                    <th>Shop Plants</th>
+                    <th>Shop Supplies</th>
+                    <th>Information</th>
+                </tr>
+           </thead>
+           <tbody>
+                <tr>
+                    <td className="links"><a href="#">All Succulents</a></td>
+                    <td className="links"><a href="#">Soil</a></td>
+                    <td className="links"><a href="#">About Us</a></td>
+                </tr>
+                <tr>
+                    <td className="links"><a href="#">Explore by Genre</a></td>
+                    <td className="links"><a href="#">Food and Fertilizer</a></td>
+                    <td className="links"><a href="#">Events/Calendar</a></td>
+                </tr>
+                <tr>
+                    <td className="links"><a href="#">Exclusive Products</a></td>
+                    <td className="links"><a href="#">Pots and Containers</a></td>
+                    <td className="links"><a href="#">Shipping/Ordering</a></td>
+                </tr>
+                <tr>
+                    <td className="links"><a href="#">New Products</a></td>
+                    <td className="links"></td>
+                    <td className="links"><a href="#">Succulent Care</a></td>
+                </tr>
+                <tr>
+                    <td className="links"></td>
+                    <td className="links"></td>
+                    <td className="links"><a href="#">Contact Us</a></td>
+                </tr>
+
+           </tbody>
+        </Table>
+
         <div>
-            <div className="footer-main">
-                <div>
-                    <h4 className="footer-main-header">Shop Plants</h4>
-                    <ul className="footer-list">
-                        <li>All Succulents</li>
-                        <li>Explore by Genre</li>
-                        <li>Exclusive Products</li>
-                        <li>New Products</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="footer-main-header">Shop Supplies</h4>
-                    <ul className="footer-list"> 
-                        <li>Soil</li>
-                        <li>Food and Fertilizer</li>
-                        <li>Pots and Containers</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="footer-main-header">Info</h4>
-                    <ul className="footer-list">
-                        <li>About Us</li>
-                        <li>Events/Calendar</li>
-                        <li>Shipping/Ordering</li>
-                        <li>Succulent Care</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div>
-                <LogoImg />
-            </div>
+            <LogoImg />
         </div>
         </>
     );
