@@ -1,5 +1,4 @@
 import React from "react";
-import { MDBIcon } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -9,11 +8,15 @@ export default function FooterSocial () {
          <div className="footer-container">
             <p>© 2024. Sam Lemon. All Rights Reserved</p>
             <div className="social-icons">
-                <p><i class="social-link fab fa-facebook" fa-3x></i></p>
-                <p><i class="social-link fab fa-instagram" fa-3x></i></p>
-                <p><i class="social-link fab fa-twitter" fa-3x></i></p>
+                <p><i className="social-link fab fa-facebook fa-2x"></i></p>
+                <p><i className="social-link fab fa-instagram fa-2x"></i></p>
+                <p><i className="social-link fab fa-twitter fa-2x"></i></p>
             </div>
-            <p>Terms & Conditions | Privacy Policy</p>
+            <div className="terms-privacy">
+                <p><a href="#">Terms & Conditions</a></p>
+                <p>|</p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
         </div>
     );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import LogoImg from './LogoImg';
 import Table from 'react-bootstrap/Table';
 
 
@@ -7,7 +6,7 @@ export default function FooterMain () {
 
     return(
         <>
-        <Table className="text-center table-borderless" id="footer-table">
+        <Table className="text-center table-borderless" size="sm" id="footer-table">
            <thead>
                 <tr>
                     <th>Shop Plants</th>
@@ -44,10 +43,6 @@ export default function FooterMain () {
 
            </tbody>
         </Table>
-
-        <div>
-            <LogoImg />
-        </div>
         </>
     );
 
