@@ -10,15 +10,20 @@ import banner_succs from './images/banner-succs.jpeg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import ProductCard from './Components/ProductCard';
+import {getSucculents} from './API/SuccsApi';
 
 export default function App() {
-  useEffect(() => {document.body.style.backgroundColor = '#E8E5E5'})
+  useEffect(() => {document.body.style.backgroundColor = '#E8E5E5'
+  getSucculents().then((data) => {
+    console.log(data)
+  })
+  });
 
   return (
     <>
       <ProductCard />
         <NavBar />
-        <div className='succ-banner' 
+        <div className='succ-banner'
           style={{
             backgroundImage: `url(${banner_succs})`,
             backgroundSize: 'cover',
@@ -37,9 +42,3 @@ export default function App() {
     </>
   );
 }
-
-
-
-
-
-
