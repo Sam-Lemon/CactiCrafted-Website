@@ -13,18 +13,6 @@ class SuccsApi {
         }
     }
 
-    getOne = async(id) => {
-        
-            try{
-                const resp = await fetch(API_SUCCULENTS + id);
-                const data = await resp.json();
-                return data;
-            } catch(e) {
-                console.log("Error, fetch didn't fetch", e);
-            }
-        
-    }
-
     put = async (succulent) => {
         try {
             const resp = await fetch(`${API_SUCCULENTS}${succulent._id}`, {

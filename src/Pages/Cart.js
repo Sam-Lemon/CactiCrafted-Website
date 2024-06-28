@@ -45,10 +45,10 @@ export default function Cart () {
                                                 </Col>
                                                 <Col md="3" lg="3" xl="3">
                                                     <p tag="h6" className="text-black mb-0">
-                                                        Shirt
+                                                        PRODUCT NAME
                                                     </p>
                                                     <p tag="h6" className="text-black mb-0">
-                                                        Cotton T-shirt
+                                                        PRODUCT NAME
                                                     </p>
                                                 </Col>
                                                 <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
@@ -56,7 +56,7 @@ export default function Cart () {
                                                         <Form.Control
                                                             placeholder="minus"
                                                             aria-label="minus"
-                                                            aria-describedby="minus-addon1"
+                                                            aria-describedBy="minus-addon1"
                                                         />
 
                                                     
