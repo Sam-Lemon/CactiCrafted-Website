@@ -1,23 +1,22 @@
 import React from "react";
-// import NavBar from "../Components/NavBar";
-// import DropNavBar from "../Components/DropNavBar";
-// import Carousel from "../Components/SuccCarousel";
-// import ImgTable from "../Components/ImgTable";
-// import AppRouterComp from "../API/AppRouterComp";
-// import Footer from "../Components/Footer";
+import NavBar from "../Components/NavBar";
+import AppRouterComp from "../API/AppRouterComp";
+import DropNavBar from "../Components/DropNavBar";
+import Carousel from "../Components/SuccCarousel";
+import ProductTable from "../Components/ProductTable";
+import Footer from "../Components/Footer";
 
 
 export default function HomePage () {
 
     return(
         <>
-        <p>Testing HomePage</p>
-        {/* <NavBar />
+        <NavBar />
+        <AppRouterComp />
         <DropNavBar />
         <Carousel />
-        <ImgTable />
-        <AppRouterComp />
-        <Footer /> */}
+        <ProductTable />
+        <Footer />
         </>
     );
 }

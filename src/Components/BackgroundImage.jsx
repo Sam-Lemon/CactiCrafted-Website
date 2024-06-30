@@ -1,3 +1,7 @@
+/** This component just styles the background image for the 
+ * succulent banner towards the top of the page. I've made
+ * it it's own component in case I want to use it elsewhere.*/
+
 import backgroundImage from '../images/succ-bkg.jpg';
 
 
@@ -7,7 +11,7 @@ const BackgroundImage = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100%',
-        height: '100vh'
+        height: '30rem'
     };
 
     return(

@@ -6,25 +6,21 @@ import { Card, Button } from 'react-bootstrap/';
 
 export default function ProductCard ({succulents}) {
 
-    if (!succulents) {
-        return <div>No succulents available</div>;
-    }
+    console.log(succulents);
 
     return(
         <>
-            {succulents.map((succulent, index) => (
-                <Card key={index} style={{ width: '18rem', marginBottom: '20px' }}>
-                    <Card.Img variant="top" src={succulent.img} />
-                    <Card.Body>
-                        <Card.Title>{succulent.scientificName}</Card.Title>
-                        <Card.Text>
-                            Name: {succulent.name} <br />
-                            Price: ${succulent.price}
-                        </Card.Text>
-                        <Button variant="success" onClick={() => handleAddToCart(succulent)}>Add to Cart</Button>
-                    </Card.Body>
-                </Card>
-            ))}
+            <Card key={succulents.id} style={{ marginBottom: '20px' }}>
+                <Card.Img variant="top" src={succulents.imgURL} />
+                <Card.Body>
+                    <Card.Title>{succulents.scientificName}</Card.Title>
+                    <Card.Text>
+                        Name: {succulents.name} <br />
+                        Price: ${succulents.price}
+                    </Card.Text>
+                    <Button variant="succuss" onClick={() => handleAddToCart(succulents)}>Add to Cart</Button>
+                </Card.Body>
+            </Card>
         </>
         );
     }
