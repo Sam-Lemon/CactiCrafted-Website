@@ -11,15 +11,19 @@ export default function ProductTable () {
             });
         }, []);
 
-        function filterSucculents() {
-            return succulents.filter((succulent, index) => index < 9);
+        function getRandomSucculents(count) {
+            let shuffled = succulents.slice();
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled [j]] = [shuffled[j], shuffled [i]];
+            }
+            return shuffled.slice(0, count)
         }
-
 
     return (
         <div>
             <div className="row justify-content-around">
-                {succulents && filterSucculents().map((succulent, index) => (
+                {succulents && getRandomSucculents(9).map((succulent) => (
                     <div key={succulent.id} className="mx-3 col-md-3 col-sm-12">
                         <ProductCard succulents={succulent} />
                     </div>

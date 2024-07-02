@@ -2,6 +2,8 @@
 //link to go to the product page
 import React from "react";
 import { Card, Button } from 'react-bootstrap/';
+import { putCartSucculent } from "../API/CartApi";
+
 
 
 export default function ProductCard ({succulents}) {
@@ -10,15 +12,19 @@ export default function ProductCard ({succulents}) {
 
     return(
         <>
-            <Card key={succulents.id} style={{ marginBottom: '20px' }}>
-                <Card.Img variant="top" src={succulents.imgURL} />
-                <Card.Body>
-                    <Card.Title>{succulents.scientificName}</Card.Title>
-                    <Card.Text>
-                        Name: {succulents.name} <br />
-                        Price: ${succulents.price}
+            <Card className="product-card" key={succulents.id}>
+                <Card.Img className="card-img" variant="top" src={succulents.imgURL} />
+                <Card.Body className="card-body">
+                    <Card.Title className="card-title"><strong>{succulents.scientificName}</strong></Card.Title>
+                    <Card.Text className="card-text">
+                        <div className="succ-name">
+                            "{succulents.name}"
+                        </div>
+                        <div className="succ-price">
+                            ${succulents.price}
+                        </div>
                     </Card.Text>
-                    <Button variant="succuss" onClick={() => handleAddToCart(succulents)}>Add to Cart</Button>
+                    <Button className="add-cart" variant="success" onClick={() => handleAddToCart(succulents)}>Add to Cart</Button>
                 </Card.Body>
             </Card>
         </>
@@ -26,11 +32,10 @@ export default function ProductCard ({succulents}) {
     }
 
     const handleAddToCart = (succulent) => {
-        //ADD LOGIC to put into card component
+        e.preventDefault();
         console.log(`Added ${succulent.name} to cart`);
+        putCartSucculent(succulent);
     };
-
-
 
 
 
