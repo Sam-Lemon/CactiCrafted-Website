@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
@@ -9,12 +10,21 @@ import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/esm/Image";
 import InputGroup from "react-bootstrap/esm/InputGroup";
 import Form from "react-bootstrap/esm/Form";
+import { getCartSucculent } from "../API/CartApi";
+import CartSucculent from "../Components/CartSucculent";
 
 
 export default function Cart () {
+    const [cartSucculents, setCartSucculents] = useState([]);
+
+    useEffect(() => {
+        getCartSucculent().then((data) => {
+            setCartSucculents(data);
+        });
+    }, []);
 
     return(
-        <section className="h-100 h-custom" style={{ backgroundColor: "#eee"}}>
+        <section className="cart h-100 h-custom" style={{ backgroundColor: "#eee"}}>
             <Container className="py-5 h-100">
                 <Row className="justify-content-center align-items-center h-100">
                     <Col size="12">
@@ -23,166 +33,12 @@ export default function Cart () {
                                 <Row className="g-0">
                                     <Col lg="8">
                                         <div className="p-5">
-                                            <div className="d-flex justify-content-between align-items-center mb-5">
-                                                <h3 className="fw-bold mb-0 text-black">
-                                                    Shopping Cart
-                                                </h3>
-                                                <p className="mb-0 text-muted">
-                                                    3 items
-                                                </p>
-                                            </div>
+                                            <h3 className="fw-bold mb-0 text-black">Shopping Cart</h3>
 
                                             <hr className="my-4" />
-
-                                            <Row className="mb-4 d-flex justify-content-between align-items-center">
-                                                <Col md="2" lg="2" xl="2">
-                                                    <CardImg
-                                                        src="ATTACH IMAGE FROM API"
-                                                        fluid = "true"
-                                                        className="rounded-3"
-                                                        alt="ATTACH PLANT NAME FROM API"
-                                                    />
-                                                </Col>
-                                                <Col md="3" lg="3" xl="3">
-                                                    <p tag="h6" className="text-black mb-0">
-                                                        PRODUCT NAME
-                                                    </p>
-                                                    <p tag="h6" className="text-black mb-0">
-                                                        PRODUCT NAME
-                                                    </p>
-                                                </Col>
-                                                <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
-                                                    <InputGroup>
-                                                        <Form.Control
-                                                            placeholder="minus"
-                                                            aria-label="minus"
-                                                            aria-describedBy="minus-addon1"
-                                                        />
-
-                                                    
-                                                    </InputGroup>
-                                                    
-                                                    <Button color="link" className="px-2">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="minus" 
-                                                        />
-                                                    </Button>
-
-                                                    {/* <Input type="number" min="0" defaultValue={1} size="sm" /> */}
-
-                                                    <Button color="link" className="px-2">
-                                                        <Image 
-                                                            fas="true"                                                        
-                                                            icon="plus" 
-                                                        />
-                                                    </Button>
-
-
-
-                                                </Col>
-                                                <Col md="3" lg="2" xl="2" className="text-end">
-                                                    <h6 className="mb-0">COST OF SUCCULENT</h6>
-                                                </Col>
-                                                <Col md="1" lg="1" xl="1" className="text-end">
-                                                    <a href ="#!" className="text-muted">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="times" 
-                                                        />
-                                                    </a>
-                                                </Col> 
-                                            </Row>
-
+                                                <CartSucculent />
                                             <hr className="my-4"/>
 
-                                            <Row className="mb-4 d-flex justify-content-between align-items-center">
-                                                <Col md="2" lg="2" xl="2">
-                                                    <CardImg
-                                                        src="IMG NEEDED HERE"
-                                                        fluid = "true"
-                                                        className="rounded-3"
-                                                        alt="IMG TITLE"
-                                                        />
-                                                </Col>
-                                                <Col md="3" lg="3" xl="3">
-                                                    <h6 className="text-muted">Shirt</h6>
-                                                    <h6 className="text-black mb-0">Cotton T-shirt</h6>
-                                                </Col>
-                                                <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
-                                                    <Button color="link" className="px-2">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="minus" 
-                                                        />
-                                                    </Button>
-
-                                                    {/* <Input type="number" min="0" defaultValue={1} size="sm" /> */}
-
-                                                    <Button color="link" className="px-2">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="plus" 
-                                                        />
-                                                    </Button>
-                                                </Col>
-                                                <Col md="3" lg="2" xl="2" className="text-end">
-                                                    <h6 className="mb-0">ITEM PRICE</h6>
-                                                </Col>
-                                                <Col md="1" lg="1" xl="1" className="text-end">
-                                                    <a href="#!" className="text-muted">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="times" 
-                                                        />
-                                                    </a>
-                                                </Col>
-                                            </Row>
-
-                                            <hr className="my-4" />
-
-                                            <Row className="mb-4 d-flex justify-content-between align-items-center">
-                                                <Col md="2" lg="2" xl="2">
-                                                    <CardImg    
-                                                        src="IMG SOURCE NEEDED"
-                                                        fluid = "true"
-                                                        className="rounded-3"
-                                                        alt="IMG TITLE HERE"
-                                                        />
-                                                </Col>
-                                                <Col md="3" lg="3" xl="3">
-                                                    <h6 className="text-muted">Shirt</h6>
-                                                    <h6 className="text-black mb-0">Cotton T-shirt</h6>
-                                                </Col>
-                                                <Col md="3" lg="3" xl="3" className="d-flex align-items-center">
-                                                    <Button color="link" className="px-2">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon ="minus" 
-                                                        />
-                                                    </Button>
-
-                                                    {/* <Input type="number" min="0" defaultValue={1} size="sm" /> */}
-
-                                                    <Button color="link" className="px-2">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="plus" 
-                                                        />
-                                                    </Button>
-                                                </Col>
-                                                <Col md="3" lg="2" xl="2" className="text-end">
-                                                    <h6 className="mb-0">ITEM PRICE HERE</h6>
-                                                </Col>
-                                                <Col md="1" lg="1" xl="1" className="text-end">
-                                                    <a href="#!" className="text-muted">
-                                                        <Image 
-                                                            fas="true" 
-                                                            icon="times" 
-                                                        />
-                                                    </a>
-                                                </Col>
-                                            </Row>
 
                                             <hr className="my-4" />
 
