@@ -9,9 +9,6 @@ function Footer () {
         <div className="footer">
             <Newsletter />
             <FooterMain />
-            <div className="logoImg">
-                <LogoImage />
-            </div>
             <Socials />
 
         </div>

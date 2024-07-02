@@ -6,7 +6,7 @@ export default function FooterMain () {
 
     return(
         <>
-        <Table className="text-center table-borderless" size="sm" id="footer-table">
+        <Table id="footer-table" className="text-center table-borderless" size="sm">
            <thead>
                 <tr>
                     <th>Shop Plants</th>
