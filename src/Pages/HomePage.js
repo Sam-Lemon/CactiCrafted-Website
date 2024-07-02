@@ -1,8 +1,8 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
-import AppRouterComp from "../API/AppRouterComp";
+import BrandBanner from "../Components/BrandBanner";
+// import AppRouterComp from "../API/AppRouterComp";
 import DropNavBar from "../Components/DropNavBar";
-import Carousel from "../Components/SuccCarousel";
 import ProductTable from "../Components/ProductTable";
 import Footer from "../Components/Footer";
 
@@ -11,12 +11,12 @@ export default function HomePage () {
 
     return(
         <>
-        <NavBar />
-        <AppRouterComp />
-        <DropNavBar />
-        <Carousel />
-        <ProductTable />
-        <Footer />
+            <div><NavBar /></div>
+            <div><NavBar /></div>
+            <div><BrandBanner /></div>
+            <div><DropNavBar /></div>
+            <div><ProductTable /></div>
+            <div><Footer /></div>
         </>
     );
 }
