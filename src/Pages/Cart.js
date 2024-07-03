@@ -4,25 +4,13 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import Card from "react-bootstrap/esm/Card";
 import CardBody from "react-bootstrap/esm/CardBody";
-import CardImg from "react-bootstrap/esm/CardImg";
 import CardText from "react-bootstrap/esm/CardText";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/esm/Image";
-import InputGroup from "react-bootstrap/esm/InputGroup";
-import Form from "react-bootstrap/esm/Form";
-import { getCartSucculent } from "../API/CartApi";
-import CartSucculent from "../Components/CartSucculent";
 
 
 export default function Cart () {
-    const [cartSucculents, setCartSucculents] = useState([]);
-
-    useEffect(() => {
-        getCartSucculent().then((data) => {
-            setCartSucculents(data);
-        });
-    }, []);
-
+    
     return(
         <section className="cart h-100 h-custom" style={{ backgroundColor: "#eee"}}>
             <Container className="py-5 h-100">
@@ -36,7 +24,7 @@ export default function Cart () {
                                             <h3 className="fw-bold mb-0 text-black">Shopping Cart</h3>
 
                                             <hr className="my-4" />
-                                                <CartSucculent />
+
                                             <hr className="my-4"/>
 
 

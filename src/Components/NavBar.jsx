@@ -9,16 +9,16 @@ export default function NavBar() {
 
     return(
         <>
-        <Navbar bg="light" variant="light">
-            <Container>
-                <Navbar.Brand>
-                    <LogoImage />
-                </Navbar.Brand>
-                <Nav className="nav-links">
-                    <AppRouterComp />
-                </Nav>
-            </Container>
-        </Navbar>
+            <Navbar>
+                <Container>
+                    <Navbar.Brand>
+                        <LogoImage />
+                    </Navbar.Brand>
+                    <Nav>
+                        <AppRouterComp />
+                    </Nav>
+                </Container>
+            </Navbar>
         </>
 
     );

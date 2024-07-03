@@ -1,10 +1,10 @@
 
 
-const API_CART_Succulent = 'https://667e89e5f2cb59c38dc617c6.mockapi.io/cart';
+const API_CART_SUCCULENTS = 'https://667e89e5f2cb59c38dc617c6.mockapi.io/cart';
 
 const getCartSucculent = async() => {
     try{
-        const resp = await fetch(API_SUCCULENTS);
+        const resp = await fetch(API_CART_SUCCULENTS);
         const data = await resp.json();
         return data;
     } catch(e) {
@@ -13,12 +13,12 @@ const getCartSucculent = async() => {
     }
 }
 
-const putCartSucculent = async (succulent) => {
+const putCartSucculent = async (cartSucculents) => {
     try {
-        const resp = await fetch(`${API_SUCCULENTS}/${succulent._id}`, {
+        const resp = await fetch(`${API_CART_SUCCULENTS}/${cartSucculents._id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(succulent)
+            body: JSON.stringify(cartSucculents)
         });
         return await resp.json();
     } catch(e) {

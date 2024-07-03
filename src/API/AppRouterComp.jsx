@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, ButtonGroup, Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import HomePage from "../Pages/HomePage";
 import LoginPage from '../Pages/LoginPage';
 import Cart from '../Pages/Cart';
 
@@ -11,16 +12,16 @@ export default function AppRouterComp () {
         <Container>
             <Router>
                 <div>
-                    <ButtonGroup>
-                    <Button variant='outline-primary'>
-                        <Link to='/'>Home</Link>
-                    </Button>
-                    <Button variant='outline-primary'>
-                        <Link to='/login'>Login</Link>
-                    </Button>
-                    <Button variant='outline-primary'>
-                        <Link to='/cart'>Cart</Link>
-                    </Button>
+                    <ButtonGroup className="nav-links">
+                        <Button className="nav-btn btn-light">
+                            <Link to='/'>Home</Link>
+                        </Button>
+                        <Button className="nav-btn btn-light">
+                            <Link to='/login'>Login</Link>
+                        </Button>
+                        <Button className="nav-btn btn-light">
+                            <Link to='/cart'>Cart</Link>
+                        </Button>
                     </ButtonGroup>
 
                     <Switch>
@@ -35,7 +36,7 @@ export default function AppRouterComp () {
 }
 
 function Home() {
-    return <h1>Welcome to the Home Page</h1>;
+    return <h1><HomePage /></h1>;
   }
   
   function Login() {

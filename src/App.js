@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './Components/NavBar.jsx';
-import Cart from './Pages/Cart.js';
-import BrandBanner from './Components/BrandBanner';
-import DropNavBar from './Components/DropNavBar';
+import BrandBanner from './Components/BrandBanner.jsx';
+import DropNavBar from './Components/DropNavBar.jsx';
 import ProductTable from './Components/ProductTable.jsx';
 import Footer from './Components/Footer.jsx';
-import LoginPage from './Pages/LoginPage.js';
+// import HomePage from './Pages/HomePage.js';
+
 
 
 export default function App() {
@@ -15,9 +15,14 @@ export default function App() {
 
   return (
     <>
-      <div><NavBar /></div>
-      <div><ProductTable /></div>
-      <div><Cart /></div>
+      {/* <HomePage /> */}
+
+      <NavBar />
+      <BrandBanner />
+      <DropNavBar />
+      <ProductTable />
+      <Footer />
+
     </>
   );
 }
