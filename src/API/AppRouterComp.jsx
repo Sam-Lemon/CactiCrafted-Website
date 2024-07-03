@@ -3,7 +3,7 @@ import { Container, ButtonGroup, Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
 import LoginPage from '../Pages/LoginPage';
-import Cart from '../Pages/Cart';
+import CartPage from '../Pages/CartPage';
 
 
 export default function AppRouterComp () {
@@ -44,6 +44,6 @@ function Home() {
   }
     
   function CartComp () {
-    return <Cart />;
+    return <CartPage />;
   }
   

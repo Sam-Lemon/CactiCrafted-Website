@@ -10,8 +10,13 @@ export default function ProductCard ({succulents}) {
 
     console.log(succulents);
 
+    const handleAddToCart = (succulent) => {
+        console.log(`Added ${succulent.name} to cart`);
+        putCartSucculents(succulent);
+    };
+
+
     return(
-        <>
             <Card className="product-card" key={succulents.id}>
                 <Card.Img className="card-img" variant="top" src={succulents.imgURL} />
                 <Card.Body className="card-body">
@@ -27,15 +32,9 @@ export default function ProductCard ({succulents}) {
                     <Button className="add-cart" variant="success" onClick={() => handleAddToCart(succulents)}>Add to Cart</Button>
                 </Card.Body>
             </Card>
-        </>
         );
     }
 
-    const handleAddToCart = (succulent) => {
-        e.preventDefault();
-        console.log(`Added ${succulent.name} to cart`);
-        putCartSucculent(succulent);
-    };
 
 
 
