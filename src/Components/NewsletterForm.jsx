@@ -33,10 +33,10 @@ export default function NewsletterSignup () {
         <>
             <Form className="newsletter-signup" onSubmit={handleSubmit}>
                 <Form.Group className="news-input-name">
-                    <Form.Control type='name' placeholder='Name' onChange={(e) => setNewsName(e.target.value)} />
+                    <Form.Control type='name' placeholder='Name' />
                 </Form.Group>
                 <Form.Group className="new-input-email">
-                    <Form.Control type='email' placeholder='Email' onChange={(e) => setNewsEmail(e.target.value)} />
+                    <Form.Control type='email' placeholder='Email' />
                 </Form.Group>
                 <Form.Group className='text-center'>
                     <Button className='news-btn text-center' type='submit'>Join List</Button>
