@@ -27,7 +27,7 @@ export default function AppRouterComp () {
                     <Switch>
                         <Route path='/' exact component={Home}/>
                         <Route path='/login' component={Login}/>
-                        <Route path='/cart' component={CartComp}/>
+                        <Route path='/cart' component={CartPage}/>
                     </Switch>
                 </div>
             </Router>
