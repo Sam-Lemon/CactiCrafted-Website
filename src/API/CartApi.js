@@ -1,49 +1,37 @@
 
+const API_CART_SUCCULENT = 'https://667e89e5f2cb59c38dc617c6.mockapi.io/cartSucculent';
 
-const API_CART_SUCCULENTS = 'https://667e89e5f2cb59c38dc617c6.mockapi.io/cartSucculent';
-
-const getCart = async() => {
-    try{
-        console.log('Fetching data from:', API_CART_SUCCULENTS);
-        
-        const resp = await fetch(API_CART_SUCCULENTS);
-
+const fetchCartSucculent = async () => {
+    try {
+        const resp = await fetch(API_CART_SUCCULENT);
         if (!resp.ok) {
-            throw new Error('Failed to fetch: ${resp.status} ${resp.statusText}');
+            throw new Error ('Failed to fetch cart succulents');
         }
 
         const data = await resp.json();
-        console.log('Received data:', data);
+        console.log('Cart Succulents:', data);
         return data;
-    } catch(e) {
-        console.error("Error fetching cart:", e);
+    } catch (e) {
+        console.error('Error fetching cart succulents:', e);
         throw e;
     }
-
 }
 
+const deleteCartSucculent = async (id) => {
+    const url = `${API_CART_SUCCULENT}/${id}`;
 
-const putCart = async (cartSucculent) => {
     try {
-        console.log('Updating cart with:', cartSucculent);
-        
-        const resp = await fetch(`${API_CART_SUCCULENTS}/${cartSucculent._id}`, {
-            method: 'PUT',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(cartSucculent)
+        const resp = await fetch(url, {
+            method: 'DELETE',
         });
 
         if (!resp.ok) {
-            throw new Error('Failed to update: ${resp.status} ${resp.statusText}');
+            throw new Error ('Failed to delete cart succulent');
         }
 
-        const updatedCartSucculent = await resp.json();
-        console.log('Cart updated successfully:', updatedCartSucculent)
-        return updatedCartSucculent;
-    } catch(e) {
-        console.error("Error updating cart:", e);
+        console.log(`Deleted cart succulent with ID ${id}`);
+    } catch (e) {
+        console.error('Error deleting cart succulent', e);
         throw e;
     }
 }
-
-export { getCart, putCart };
