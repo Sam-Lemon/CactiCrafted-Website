@@ -1,8 +1,7 @@
-//this is going to be the basic card, image, plant name,
-//link to go to the product page
+
 import React from "react";
 import { Card, Button } from 'react-bootstrap/';
-import { putCartSucculent } from "../API/CartApi";
+import { putCart } from "../API/CartApi";
 
 
 
@@ -11,8 +10,14 @@ export default function ProductCard ({succulents}) {
     console.log(succulents);
 
     const handleAddToCart = (succulent) => {
-        console.log(`Added ${succulent.name} to cart`);
-        putCartSucculents(succulent);
+        console.log(`Added ${succulents.name} to cart`);
+        putCart(succulent)
+            .then(updatedSucculent => {
+                console.log('Successfully added to cart:', updatedSucculent);
+            })
+            .catch (error => {
+                console.error ('Failed to add to cart:', error)
+            });
     };
 
 
