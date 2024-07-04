@@ -27,7 +27,7 @@ export default function AppRouterComp () {
                     <Switch>
                         <Route path='/' exact component={Home}/>
                         <Route path='/login' component={Login}/>
-                        <Route path='/cart' component={CartPage}/>
+                        <Route path='/cart' component={Cart}/>
                     </Switch>
                 </div>
             </Router>
@@ -43,7 +43,7 @@ function Home() {
     return <LoginPage />;
   }
     
-  function CartComp () {
+  function Cart () {
     return <CartPage />;
   }
   
