@@ -6,6 +6,10 @@ import { addToCart } from "../API/CartApi";
 
 
 export default function ProductCard ({ succulent }) {
+
+/**Function to add succulent information to the cart API on click of
+ * the "Add to Cart" button. succulentData initializes an object that
+ * pulls the required information from the component props.*/    
     const handleAddToCart = () => {
         const succulentData = {
             id: succulent.id,
@@ -18,6 +22,9 @@ export default function ProductCard ({ succulent }) {
 
         console.log(`Added ${succulent.name} to cart:`, succulentData);
 
+/**Calling this function performs a post request to the API, adding
+ * the succulent to the cart API. If it doesn't work an error will be
+ * shown.*/
         addToCart(succulentData)
             .then(addedSucculent => {
                 console.log('Successfully added to cart:', addedSucculent);
@@ -28,6 +35,11 @@ export default function ProductCard ({ succulent }) {
     };
 
 
+/**Returning the ProductCard. Each card gets it's own unique key, image, names,
+ * and price using the array properties. At the bottom is a button to add the 
+ * succulent to the card using an event listener and calling the above
+ * handleAddToCart function, passing the succulent as a prop.
+ */
     return(
         <Card className="product-card" key={succulent.id}>
             <Card.Img className="card-img" variant="top" src={succulent.imgURL} />

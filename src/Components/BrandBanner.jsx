@@ -1,3 +1,5 @@
+/**Component for the brand banner. */
+
 import React from "react";
 
 export default function BrandBanner () {

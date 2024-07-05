@@ -1,55 +1,54 @@
-/** NOTES
- * 
- * email and password fields don't clear out correctly after submit
- * on click the submit button turns blue
- * want to be able to add new account into the mockAPI i have
- * 
- * 
- * 
- * 
-*/
-
-
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
 export default function RegForm (props) {
+
+/**Setting the state for the first and last name, email, and password.*/
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+
+/**On submit, the handleSubmit function is called, which logs 
+ * all the new inputs and resets the fields to empty.*/
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log("First Name:", firstName);
+        console.log("Last Name:", lastName);
         console.log("Email:", email);
         console.log("Password:", password);
 
         //Resets email and password field after submission.
+        setFirstName("");
+        setLastName("");
         setEmail("");
         setPassword("");
 
     };
 
+/**Returning the register form, which onSubmit calls the handleSubmit function.
+ * On a change in the Form.Controls, the newly inputted values are updated.*/
     return(
         <Form className='reg-form' onSubmit={handleSubmit}>
             <h3 className='text-center'>Register</h3>
             <Form.Group className='mb-3' controlId='formGroupFirstName'>
                 <Form.Label>First Name</Form.Label>
-                <Form.Control type='first-name' onChange={(e) => setFirstName(e.target.value)} />
+                <Form.Control type='text' placeholder='Enter your first name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formGroupLastName'>
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control type='last-name' onChange={(e) => setLastName(e.target.value)} />
+                <Form.Control type='text' placeholder='Enter your last name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formGroupEmail'>
                 <Form.Label>Email Address</Form.Label>
-                <Form.Control type='email' onChange={(e) => setEmail(e.target.value)} />
+                <Form.Control type='email' placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formGroupPassword'>
                 <Form.Label>Password</Form.Label>
-                <Form.Control type='password' onChange={(e) => setPassword(e.target.value)} />
+                <Form.Control type='password' placeholder='Enter your password' value={password} onChange={(e) => setPassword(e.target.value)} />
             </Form.Group>
 
             <div className='text-center'>

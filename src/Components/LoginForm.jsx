@@ -1,22 +1,17 @@
-/** NOTES
- * 
- * email and password fields don't clear out correctly after submit
- * on click the submit button turns blue
- * 
- * 
- * 
- * 
- * 
-*/
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
 export default function LoginForm (props) {
+
+/**Setting the state for email and password. */
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+/**Because a form is being used, onSubmit calls handleSubmit. Forms use onSubmit in the parent div 
+ * instead of an event listener on the button. e.preventDefault prevents the default form 
+ * submission behavior of reloading the page.*/
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Email:", email);
@@ -28,6 +23,9 @@ export default function LoginForm (props) {
 
     };
 
+/**Using the React Bootstrap Form components, each input has the onChange
+ * handler that updates the state of the particular input.
+ */
     return(
         <Form className='login-form' onSubmit={handleSubmit}>
             <h3 className="text-center">Login</h3>

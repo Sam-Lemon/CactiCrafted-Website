@@ -1,3 +1,5 @@
+/**This is the table component of the footer. Using React Bootstrap's Table. */
+
 import React from "react";
 import Table from 'react-bootstrap/Table';
 
