@@ -1,16 +1,21 @@
 import React from "react";
 import Counter from "./Counter";
 import { Card, CardBody, Row, Col, CardImg } from 'react-bootstrap/';
-
+import { deleteCartSucculent } from '../API/CartApi';
 
 
 export default function CartCard ({ cartSucculent, onDelete }) {
+
+/**Calculating the total price, taking the quantity and multiplying it by the price 
+ * of the succulent (from the API). I used toFixed to specify 2 decimal places 
+ * in the price. */
     const calcTotalPrice = (quantity, price) => {
         return (quantity * price).toFixed(2);
     };
 
+/**Deleting the specified (by id) cartSucculent */
     const handleDeleteSucculent = () => {
-        onDelete(cartSucculent.id);
+        deleteCartSucculent(cartSucculent.id);
     };
 
 
@@ -19,10 +24,7 @@ export default function CartCard ({ cartSucculent, onDelete }) {
             <CardBody className="p-4">
                 <Row className="justify-content-between align-items-center">
                     <Col md="2" lg="2" xl="2">
-                    <CardImg className="rounded-3" fluid
-                        src={cartSucculent.img}
-                        alt={cartSucculent.scientificName}
-                        />
+                        <CardImg className="rounded-3" src={cartSucculent.img} alt={cartSucculent.scientificName} />
                     </Col>
 
                     <Col md="3" lg="3" xl="3">

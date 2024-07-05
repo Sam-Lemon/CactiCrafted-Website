@@ -1,19 +1,26 @@
 
 import React from "react";
 import { Card, Button } from 'react-bootstrap/';
-import { putCart } from "../API/CartApi";
+import { addToCart } from "../API/CartApi";
 
 
 
-export default function ProductCard ({succulents}) {
+export default function ProductCard ({ succulent }) {
+    const handleAddToCart = () => {
+        const succulentData = {
+            id: succulent.id,
+            name: succulent.name,
+            price: succulent.price,
+            imgURL: succulent.imgURL,
+            scientificName: succulent.scientificName,
+            quantity: 1,
+        };
 
-    console.log(succulents);
+        console.log(`Added ${succulent.name} to cart:`, succulentData);
 
-    const handleAddToCart = (succulent) => {
-        console.log(`Added ${succulents.name} to cart`);
-        putCart(succulent)
-            .then(updatedSucculent => {
-                console.log('Successfully added to cart:', updatedSucculent);
+        addToCart(succulentData)
+            .then(addedSucculent => {
+                console.log('Successfully added to cart:', addedSucculent);
             })
             .catch (error => {
                 console.error ('Failed to add to cart:', error)
@@ -22,21 +29,21 @@ export default function ProductCard ({succulents}) {
 
 
     return(
-            <Card className="product-card" key={succulents.id}>
-                <Card.Img className="card-img" variant="top" src={succulents.imgURL} />
-                <Card.Body className="card-body">
-                    <Card.Title className="card-title"><strong>{succulents.scientificName}</strong></Card.Title>
-                    <Card.Text className="card-text">
-                        <div className="succ-name">
-                            "{succulents.name}"
-                        </div>
-                        <div className="succ-price">
-                            ${succulents.price}
-                        </div>
-                    </Card.Text>
-                    <Button className="add-cart" variant="success" onClick={() => handleAddToCart(succulents)}>Add to Cart</Button>
-                </Card.Body>
-            </Card>
+        <Card className="product-card" key={succulent.id}>
+            <Card.Img className="card-img" variant="top" src={succulent.imgURL} />
+            <Card.Body className="card-body">
+                <Card.Title className="card-title"><strong>{succulent.scientificName}</strong></Card.Title>
+                <Card.Text className="card-text">
+                    <span className="succ-name">
+                        "{succulent.name}"
+                    </span>
+                    <span className="succ-price">
+                        ${succulent.price}
+                    </span>
+                </Card.Text>
+                <Button className="add-cart" variant="success" onClick={() => handleAddToCart}>Add to Cart</Button>
+            </Card.Body>
+        </Card>
         );
     }
 
