@@ -41,7 +41,7 @@ export default function ProductCard ({ succulent }) {
                         ${succulent.price}
                     </span>
                 </Card.Text>
-                <Button className="add-cart" variant="success" onClick={() => handleAddToCart}>Add to Cart</Button>
+                <Button className="add-cart" variant="success" onClick={() => handleAddToCart(succulent)}>Add to Cart</Button>
             </Card.Body>
         </Card>
         );
