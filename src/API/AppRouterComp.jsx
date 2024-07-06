@@ -1,49 +1,34 @@
 import React from "react";
-import { Container, ButtonGroup, Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Container, ButtonGroup, Button } from "react-bootstrap";
+import { Switch, Route, Link } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
-import LoginPage from '../Pages/LoginPage';
-import CartPage from '../Pages/CartPage';
+import LoginPage from "../Pages/LoginPage";
+import CartPage from "../Pages/CartPage";
 
+export default function AppRouterComp() {
+  return (
+    <Container>
+      <div>
+        <ButtonGroup className="nav-links">
+          <Link to="/">
+            <Button className="nav-btn btn-light">Home</Button>
+          </Link>
 
-export default function AppRouterComp () {
+          <Link to="/login">
+            <Button className="nav-btn btn-light">Login</Button>
+          </Link>
 
-    return(
-        <Container>
-            <Router>
-                <div>
-                    <ButtonGroup className="nav-links">
-                        <Button className="nav-btn btn-light">
-                            <Link to='/'>Home</Link>
-                        </Button>
-                        <Button className="nav-btn btn-light">
-                            <Link to='/login'>Login</Link>
-                        </Button>
-                        <Button className="nav-btn btn-light">
-                            <Link to='/cart'>Cart</Link>
-                        </Button>
-                    </ButtonGroup>
+          <Link to="/cart">
+            <Button className="nav-btn btn-light">Cart</Button>
+          </Link>
+        </ButtonGroup>
 
-                    <Switch>
-                        <Route path='/' exact component={Home}/>
-                        <Route path='/login' component={Login}/>
-                        <Route path='/cart' component={Cart}/>
-                    </Switch>
-                </div>
-            </Router>
-        </Container>
-    );
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/cart" component={CartPage} />
+        </Switch>
+      </div>
+    </Container>
+  );
 }
-
-function Home() {
-    return <h1><HomePage /></h1>;
-  }
-  
-  function Login() {
-    return <LoginPage />;
-  }
-    
-  function Cart () {
-    return <CartPage />;
-  }
-  

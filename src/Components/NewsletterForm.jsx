@@ -7,9 +7,11 @@ import { postUser } from '../API/UsersApi';
 
 export default function NewsletterSignup () {
 
-/**Setting the state for newsName and NewsEmail*/
+/**Setting the state for newsName, newsEmail, and key 
+ * (which will control the rerender)*/
     const [newsName, setNewsName] = useState("");
     const [newsEmail, setNewsEmail] = useState("");
+    const [key, setKey] = useState(0);
 
 /**This asynchronous function uses e.preventDefault to prevent the form's
  * default action of reloading, and then console logs the inputted
@@ -28,6 +30,9 @@ export default function NewsletterSignup () {
             //Resets name and email field after submission.
             setNewsName("");
             setNewsEmail("")
+
+            //increment the key to force a re-render
+            setKey(prevKey => prevKey + 1);
         } catch (error) {
             console.error('Failed to update user:', error);
         }
@@ -39,7 +44,7 @@ export default function NewsletterSignup () {
  */
     return (
         <>
-            <Form className="newsletter-signup" onSubmit={handleSubmit}>
+            <Form key={key} className="newsletter-signup" onSubmit={handleSubmit}>
                 <Form.Group className="news-input-name">
                     <Form.Control type='name' placeholder='Name' onChange={(e) => setNewsName(e.target.value)} />
                 </Form.Group>

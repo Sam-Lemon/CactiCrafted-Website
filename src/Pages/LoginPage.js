@@ -1,11 +1,3 @@
-/** 
- * 
- * 
- * 
- * 
- */
-
-
 import React, { useState } from "react";
 import loginImage from '../images/loginSucc.jpg';
 import LoginForm from "../Components/LoginForm";
