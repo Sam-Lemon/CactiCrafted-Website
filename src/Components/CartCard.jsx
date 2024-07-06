@@ -43,7 +43,7 @@ export default function CartCard ({ cartSucculent, onDelete }) {
 
                     <Col md="1" lg="1" xl="1" className="text-end">
                         <a href="#!" className="text-danger" onClick={handleDeleteSucculent}>
-                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <i className="fa fa-trash" aria-hidden="true"></i>
                         </a>
                     </Col>
                 </Row>
