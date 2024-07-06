@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 
-export default function Counter () {
-    const [count, setCount] = useState(0);
+export default function Counter({ initialCount, onChange }) {
+  const [count, setCount] = useState(initialCount);
 
-//increments the value of quantity by + 1
-    const handleIncrement = () => {
-        setCount(count + 1);
-    };
+  const handleIncrease = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+    if (onChange) {
+      onChange(newCount); //notifies parent component of quantity change
+    }
+  };
 
-//decrements the value of quantity by - 1
-    const handleDecrement = () => {
-        setCount(count - 1);
-    };
+  const handleDecrease = () => {
+    if (count > 1) {
+      const newCount = count - 1;
+      setCount(newCount);
+      if (onChange) {
+        onChange(newCount); //notifies parent component of quantity change
+      }
+    }
+  };
 
-//returning the counter component.
-    return (
-        <div>
-            <h1>Quantity: {count}</h1>
-            <button onClick={handleIncrement}>+</button>
-            <button onClick={handleDecrement}>-</button>
-        </div>
-    );
+  //returning the counter component.
+  return (
+    <div className="counter">
+      <button onClick={handleDecrease}>-</button>
+      <span>{count}</span>
+      <button onClick={handleIncrease}>+</button>
+    </div>
+  );
 }
