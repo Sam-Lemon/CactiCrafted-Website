@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CartCard from "../Components/CartCard";
+import PayButton from "../Components/PayButton";
 import {
   Container,
   Row,
@@ -55,11 +56,11 @@ export default function CartPage() {
 
   return (
     <section className="h-100" style={{ backgroundColor: "#eee" }}>
-      <Container className="py-5 h-100">
-        <Row className="justify-content-center align-items-center h-100">
+      <Container className="cart-container py-5 h-100">
+        <Row className="cart-card justify-content-center align-items-center h-100">
           <Col md="10">
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h3 className="fw-normal mb-0 text-black">Shopping Cart</h3>
+              <h3 className="fw-normal mb-0 text-light">Shopping Cart</h3>
             </div>
 
             <div>
@@ -86,13 +87,7 @@ export default function CartPage() {
             </Card>
 
             {/**Proceed to Pay button */}
-            <Card>
-              <CardBody>
-                <Button color="danger" block size="lg">
-                  Proceed to Pay
-                </Button>
-              </CardBody>
-            </Card>
+            <PayButton />
           </Col>
         </Row>
       </Container>

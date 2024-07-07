@@ -24,9 +24,9 @@ export default function Counter({ initialCount, onChange }) {
   //returning the counter component.
   return (
     <div className="counter">
-      <button onClick={handleDecrease}>-</button>
+      <button className="decrease-btn" onClick={handleDecrease}>-</button>
       <span>{count}</span>
-      <button onClick={handleIncrease}>+</button>
+      <button className="increase-btn" onClick={handleIncrease}>+</button>
     </div>
   );
 }
