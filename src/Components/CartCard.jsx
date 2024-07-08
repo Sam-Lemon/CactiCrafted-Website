@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Row, Col, CardImg } from "react-bootstrap/";
 import Counter from "./Counter";
 
-export default function CartCard({ cartSucculent, onDelete }) {
+export default function CartCard({ cartSucculent, onDelete, onQuantityChange }) {
   const [quantity, setQuantity] = useState(cartSucculent.quantity);
 
   /**Calculating the total price, taking the quantity and multiplying it by the price
@@ -12,8 +12,9 @@ export default function CartCard({ cartSucculent, onDelete }) {
     return (quantity * price).toFixed(2);
   };
 
+  /**Sets the quantity to whatever the new quantity is. */
   const handleQuantityChange = (newQuantity) => {
-    setQuantity(newQuantity);
+    onQuantityChange(cartSucculent.id, newQuantity);
   };
 
   /**Deleting the specified (by id) cartSucculent */
@@ -45,15 +46,23 @@ export default function CartCard({ cartSucculent, onDelete }) {
             xl="2"
             className="d-flex align-items-center justify-content-around"
           >
+            {/* /**The Counter component is added here. It takes a the quantity, and
+  when it is changed, either by pressing the + or - buttons next to it,
+  it calls the handleQuantityChange function from above and updates
+  the quantity appropriately. */}
             <Counter initialCount={quantity} onChange={handleQuantityChange} />
           </Col>
 
+          {/* /**Calling the calcTotalPrice function from above, passes the
+  quantity of the succulent and the price to calculate the total price. */}
           <Col md="3" lg="2" xl="2" className="offset-lg-1">
             <p tag="h5" className="mb-0">
               ${calcTotalPrice(quantity, cartSucculent.price)}
             </p>
           </Col>
 
+          {/* /**On the click of the button, handleDeleteSucculent, from above, is 
+  called and that succulent is deleted. */}
           <Col md="1" lg="1" xl="1" className="text-end">
             <a
               href="#!"

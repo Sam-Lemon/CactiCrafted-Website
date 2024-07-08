@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Form, Button } from "react-bootstrap";
 
 export default function LoginForm(props) {
   /**Setting the state for email and password. */
@@ -28,10 +27,11 @@ export default function LoginForm(props) {
       <h3 className="text-center">Login</h3>
       <Form.Group className="mb-3" controlId="formGroupEmail">
         <Form.Label>Email Address</Form.Label>
-        <Form.Control 
-            type="email" 
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} />
+        <Form.Control
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formGroupPassword">
         <Form.Label>Password</Form.Label>
@@ -54,7 +54,8 @@ export default function LoginForm(props) {
         <Button
           className="link-btn"
           variant="link"
-          onClick={(e) => props.onFormSwitch("register")}>
+          onClick={(e) => props.onFormSwitch("register")}
+        >
           Don't have an account? Register here.
         </Button>
       </div>

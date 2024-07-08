@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import LogoImage from "./LogoImg";
 
+/**This is the main navbar. I used the router links to 
+ * switch between pages.*/
 export default function NavBar() {
   return (
     <Navbar bg="light" expand="lg">

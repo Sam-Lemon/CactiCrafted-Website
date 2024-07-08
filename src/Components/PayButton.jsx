@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
+/**I styled the PayButton component with a transparent background.*/
 export default function PayButton() {
   return (
     <Card style={{ backgroundColor: "transparent", border: "none" }}>
