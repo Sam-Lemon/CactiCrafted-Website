@@ -3,7 +3,11 @@ import CartCard from "../Components/CartCard";
 import PayButton from "../Components/PayButton";
 import Subtotal from "../Components/Subtotal";
 import { Container, Row, Col } from "react-bootstrap/";
-import { fetchCartSucculent, deleteCartSucculent } from "../API/CartApi";
+import {
+  fetchCartSucculent,
+  deleteCartSucculent,
+  updateCartSucculent,
+} from "../API/CartApi";
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState([]);
@@ -43,6 +47,14 @@ export default function CartPage() {
     }
   };
 
+  const handleUpdateQuantity = (id, newQuantity) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, quantity: newQuantity } : item
+      )
+    );
+  };
+
   useEffect(() => {
     fetchCartItems();
   }, []);
@@ -62,6 +74,7 @@ export default function CartPage() {
                   key={item.id}
                   cartSucculent={item}
                   onDelete={handleDeleteCartItem}
+                  onUpdateQuantity={handleUpdateQuantity}
                 />
               ))}
             </div>
