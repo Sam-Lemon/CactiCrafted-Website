@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CartCard from "../Components/CartCard";
 import PayButton from "../Components/PayButton";
-import Total from "../Components/Total";
+import Subtotal from "../Components/Subtotal";
 import { Container, Row, Col } from "react-bootstrap/";
 import { fetchCartSucculent, deleteCartSucculent } from "../API/CartApi";
 
@@ -68,7 +68,7 @@ export default function CartPage() {
             <hr />
 
             {/**Discount Code input and button */}
-            <Total cartItems={cartItems} />
+            <Subtotal cartItems={cartItems} />
 
             {/**Proceed to Pay button */}
             <PayButton />

@@ -30,12 +30,12 @@ export default function Subtotal({ cartItems }) {
 
   const handleApplyDiscount = () => {
     if (discountCode === DISCOUNT_CODE) {
-      const discountedTotal = subtotal * (1 - DISCOUNT_CODE);
+      const discountedTotal = subtotal * (1 - DISCOUNT_PERCENTAGE);
       setFinalTotal(discountedTotal.toFixed(2));
     } else {
       alert("Invalid discount code");
       setDiscountCode("");
-      setFinalTotal(subtotal);
+      setFinalTotal(subtotal.toFixed(2));
     }
   };
 

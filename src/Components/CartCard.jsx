@@ -1,20 +1,27 @@
-import React, { useState } from "react";
-import { Card, Row, Col, CardImg } from "react-bootstrap/";
+import React from "react";
+import { updateCartSucculent } from "../API/CartApi";
 import Counter from "./Counter";
+import { Card, Row, Col, CardImg } from "react-bootstrap/";
 
-export default function CartCard({ cartSucculent, onDelete, onQuantityChange }) {
-  const [quantity, setQuantity] = useState(cartSucculent.quantity);
+export default function CartCard({
+  cartSucculent,
+  onDelete,
+  onQuantityChange,
+}) {
+  /**Sets the quantity to whatever the new quantity is. */
+  const handleQuantityChange = async (newQuantity) => {
+    try {
+      await updateCartSucculent(cartSucculent.id, { quantity: newQuantity });
+    } catch (e) {
+      console.error("Error updating quantity:", e);
+    }
+  };
 
   /**Calculating the total price, taking the quantity and multiplying it by the price
    * of the succulent (from the API). I used toFixed to specify 2 decimal places
    * in the price. */
   const calcTotalPrice = (quantity, price) => {
     return (quantity * price).toFixed(2);
-  };
-
-  /**Sets the quantity to whatever the new quantity is. */
-  const handleQuantityChange = (newQuantity) => {
-    onQuantityChange(cartSucculent.id, newQuantity);
   };
 
   /**Deleting the specified (by id) cartSucculent */
@@ -50,14 +57,17 @@ export default function CartCard({ cartSucculent, onDelete, onQuantityChange }) 
   when it is changed, either by pressing the + or - buttons next to it,
   it calls the handleQuantityChange function from above and updates
   the quantity appropriately. */}
-            <Counter initialCount={quantity} onChange={handleQuantityChange} />
+            <Counter
+              initialCount={cartSucculent.quantity}
+              onChange={handleQuantityChange}
+            />
           </Col>
 
           {/* /**Calling the calcTotalPrice function from above, passes the
   quantity of the succulent and the price to calculate the total price. */}
           <Col md="3" lg="2" xl="2" className="offset-lg-1">
             <p tag="h5" className="mb-0">
-              ${calcTotalPrice(quantity, cartSucculent.price)}
+              ${calcTotalPrice(cartSucculent.quantity, cartSucculent.price)}
             </p>
           </Col>
 
