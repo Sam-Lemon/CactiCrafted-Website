@@ -46,9 +46,9 @@ export default function Subtotal({ cartItems }) {
       className="mb-4"
       style={{ backgroundColor: "transparent", border: "none" }}
     >
-      <Card.Body style={{ backgroundColor: "transparent", border: "none" }}>
-        <div className="d-flex justify-content-betwen align-items-center mb-3">
-          <div>
+      <Card.Body className="me-0" style={{ backgroundColor: "transparent", border: "none" }}>
+        {/* <div className="d-flex justify-content-between align-items-center mb-3"> */}
+          <div className="me-0 d-flex justify-content-end">
             <h5>Subtotal: ${subtotal.toFixed(2)}</h5>
           </div>
           <div>
@@ -70,9 +70,9 @@ export default function Subtotal({ cartItems }) {
               </Button>
             </InputGroup>
           </div>
-        </div>
+        {/* </div> */}
         <hr />
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="me-0 d-flex justify-content-end">
           <h5>Total: ${finalTotal}</h5>
         </div>
       </Card.Body>
