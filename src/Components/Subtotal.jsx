@@ -7,6 +7,7 @@ import { Card, InputGroup, Button } from "react-bootstrap";
  * with the percentage off the total the code offers.*/
 export default function Subtotal({ cartItems }) {
   const [discountCode, setDiscountCode] = useState("");
+  const [appliedDiscountCode, setAppliedDiscountCode] = useState("");
   const [subtotal, setSubtotal] = useState(0);
   const [finalTotal, setFinalTotal] = useState(0);
   const DISCOUNT_CODE = "SAVE20";
@@ -16,27 +17,28 @@ export default function Subtotal({ cartItems }) {
     return cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   };
 
+  const calculateFinalTotal = (subtotal) => {
+    if (appliedDiscountCode) {
+      return (subtotal * (1 - DISCOUNT_PERCENTAGE)).toFixed(2);
+    }
+    return subtotal.toFixed(2);
+  };
+
   useEffect(() => {
     const total = calculateSubtotal();
     setSubtotal(total);
+    setFinalTotal(calculateFinalTotal(total));
+  }, [cartItems, appliedDiscountCode]);
 
-    if (discountCode === DISCOUNT_CODE) {
-      const discountedTotal = subtotal * (1 - DISCOUNT_PERCENTAGE);
-      setFinalTotal(discountedTotal.toFixed(2));
-    } else {
-      setFinalTotal(total);
-    }
-  }, [cartItems, discountCode]);
 
   const handleApplyDiscount = () => {
     if (discountCode === DISCOUNT_CODE) {
-      const discountedTotal = subtotal * (1 - DISCOUNT_PERCENTAGE);
-      setFinalTotal(discountedTotal.toFixed(2));
+      setAppliedDiscountCode(true);
     } else {
       alert("Invalid discount code");
-      setDiscountCode("");
-      setFinalTotal(subtotal.toFixed(2));
+      setAppliedDiscountCode(false);
     }
+    setDiscountCode("");
   };
 
   return (
