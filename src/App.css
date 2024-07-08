@@ -243,14 +243,24 @@ thead {
 }
 
 /*******CartPage*******/
-
 .cart-container {
    background-image: url(./images/cartSucculent.jpg);
+   background-position: center;
+   background-size: cover;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.cart-title {
+   color: #7A3F5C;
+   text-shadow: .5px .5px #905175;
+   font-size: 3rem;
 }
 
 .cart-card {
    background-color: #becfd5c0;
    border-radius: 20px;
+   box-shadow: 5px 5px 10px #C7C5DC;
    padding: 2rem;
    margin: 2rem;
 }
@@ -260,6 +270,10 @@ thead {
    border: 1px solid #7A3F5C;
    color: black;
    margin: 1rem;
-
-
 }
+
+.total-title {
+   color: #7A3F5C;
+   text-shadow: .5px .5px #905175;
+}
+

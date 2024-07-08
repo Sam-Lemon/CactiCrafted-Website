@@ -6,8 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 export default function App() {
-
-/**Changing the background color. */
+  /**Changing the background color. */
   useEffect(() => {
     document.body.style.backgroundColor = "#E2E2E4";
   });
@@ -16,7 +15,7 @@ export default function App() {
     <>
       <Router>
         <NavBar />
-        <AppRouterComp />        
+        <AppRouterComp />
       </Router>
     </>
   );

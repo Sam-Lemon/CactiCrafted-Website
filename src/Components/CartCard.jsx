@@ -3,7 +3,7 @@ import { Card, Row, Col, CardImg } from "react-bootstrap/";
 import Counter from "./Counter";
 
 export default function CartCard({ cartSucculent, onDelete }) {
-    const [quantity, setQuantity] = useState(cartSucculent.quantity);
+  const [quantity, setQuantity] = useState(cartSucculent.quantity);
 
   /**Calculating the total price, taking the quantity and multiplying it by the price
    * of the succulent (from the API). I used toFixed to specify 2 decimal places
@@ -21,11 +21,11 @@ export default function CartCard({ cartSucculent, onDelete }) {
     onDelete(cartSucculent.id);
   };
 
-  console.log('CartCard props:', cartSucculent);
+  console.log("CartCard props:", cartSucculent);
 
   return (
     <Card className="rounded-3 mb-2" key={cartSucculent.id}>
-      <Card.Body className="p-4 m-0 mw-100">
+      <Card.Body className="rounded p-4 m-0 mw-100">
         <Row className="justify-content-between align-items-center">
           <Col md="2" lg="2" xl="2">
             <CardImg
@@ -39,11 +39,13 @@ export default function CartCard({ cartSucculent, onDelete }) {
             <h6>{cartSucculent.scientificName}</h6>
           </Col>
 
-          <Col md="3" lg="3" xl="2" className="d-flex align-items-center justify-content-around">
-            <Counter 
-                initialCount={quantity}
-                onChange={handleQuantityChange} 
-                />
+          <Col
+            md="3"
+            lg="3"
+            xl="2"
+            className="d-flex align-items-center justify-content-around"
+          >
+            <Counter initialCount={quantity} onChange={handleQuantityChange} />
           </Col>
 
           <Col md="3" lg="2" xl="2" className="offset-lg-1">
