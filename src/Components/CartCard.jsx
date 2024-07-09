@@ -1,12 +1,12 @@
 import React from "react";
-import { updateCartSucculent } from "../API/CartApi";
-import Counter from "./Counter";
 import { Card, Row, Col, CardImg } from "react-bootstrap/";
+import Counter from "./Counter";
+import { updateCartSucculent } from "../API/CartApi";
 
 export default function CartCard({
   cartSucculent,
   onDelete,
-  onUpdateQuantity
+  onUpdateQuantity,
 }) {
   /**Sets the quantity to whatever the new quantity is. */
   const handleQuantityChange = async (newQuantity) => {
@@ -67,7 +67,9 @@ export default function CartCard({
           {/* /**Calling the calcTotalPrice function from above, passes the
   quantity of the succulent and the price to calculate the total price. */}
           <Col md="3" lg="2" xl="2" className="offset-lg-1">
-            <h5 className="mb-0">{calcTotalPrice(cartSucculent.quantity, cartSucculent.price)}</h5>
+            <h5 className="mb-0">
+              {calcTotalPrice(cartSucculent.quantity, cartSucculent.price)}
+            </h5>
           </Col>
 
           {/* /**On the click of the button, handleDeleteSucculent, from above, is 

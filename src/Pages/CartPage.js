@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap/";
 import CartCard from "../Components/CartCard";
 import PayButton from "../Components/PayButton";
 import Subtotal from "../Components/Subtotal";
-import { Container, Row, Col } from "react-bootstrap/";
-import {
-  fetchCartSucculent,
-  deleteCartSucculent,
-  updateCartSucculent,
-} from "../API/CartApi";
+import { fetchCartSucculent, deleteCartSucculent } from "../API/CartApi";
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState([]);

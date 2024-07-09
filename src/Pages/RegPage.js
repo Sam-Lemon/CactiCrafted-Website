@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import RegForm from "../Components/RegForm";
 import LoginForm from "../Components/LoginForm";
+import RegForm from "../Components/RegForm";
 import regImage from '../images/regSucc.jpg';
 
 

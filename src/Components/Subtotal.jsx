@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, InputGroup, Button } from "react-bootstrap";
+import { Button, Card, InputGroup } from "react-bootstrap";
 
 /**Setting state for all of the different variables. I set the initial
  * state for the subtotal and finalTotal to 0. I also created the discount

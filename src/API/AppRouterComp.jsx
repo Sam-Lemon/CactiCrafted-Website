@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Switch, Route } from "react-router-dom";
+import CartPage from "../Pages/CartPage";
 import HomePage from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
-import CartPage from "../Pages/CartPage";
 
 export default function AppRouterComp() {
   return (

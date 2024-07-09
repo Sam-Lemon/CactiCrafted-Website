@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 /**I styled the PayButton component with a transparent background.*/
 export default function PayButton() {

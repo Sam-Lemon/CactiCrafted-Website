@@ -1,8 +1,8 @@
 import React from "react";
 import BrandBanner from "../Components/BrandBanner";
 import DropNavBar from "../Components/DropNavBar";
-import ProductTable from "../Components/ProductTable";
 import Footer from "../Components/Footer";
+import ProductTable from "../Components/ProductTable";
 
 export default function HomePage() {
   return (

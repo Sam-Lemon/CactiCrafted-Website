@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap/";
+import { Button, Card } from "react-bootstrap/";
 import { addToCart } from "../API/CartApi";
 
 export default function ProductCard({ succulent }) {

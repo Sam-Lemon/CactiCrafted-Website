@@ -1,9 +1,8 @@
-/**This is the table component of the footer. Using React Bootstrap's Table.
- * None of these links go anywhere at this point, but in the future they may.*/
-
 import React from "react";
 import Table from "react-bootstrap/Table";
 
+/**This is the table component of the footer. Using React Bootstrap's Table.
+ * None of these links go anywhere at this point, but in the future they may.*/
 export default function FooterMain() {
   return (
     <>
