@@ -131,22 +131,8 @@ a {
    text-align: center;
 }
 
-.succ-name {
-   font-size: x-large;
-   text-align: center;
-}
-
-.succ-price {
-   display: flex;
-   justify-content: center;
-   font-size: larger;
-   font-weight: bold;
-}
-
 .add-cart {
    max-width: 7rem;
-   display: flex;
-   justify-content: center;
    background-color: #CB8E9B;
    border: 2px ridge #4A2729;
 }

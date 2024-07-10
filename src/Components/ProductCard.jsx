@@ -43,11 +43,11 @@ export default function ProductCard({ succulent }) {
           <strong>{succulent.scientificName}</strong>
         </Card.Title>
         <Card.Text className="card-text">
-          <span className="succ-name">"{succulent.name}"</span>
-          <span className="succ-price">${succulent.price}</span>
+          <span className="d-flex justify-content-center mx-auto fs-3">"{succulent.name}"</span>
+          <span className="d-flex justify-content-center mx-auto fs-4 fw-bold">${succulent.price}</span>
         </Card.Text>
         <Button
-          className="add-cart"
+          className="add-cart d-flex justify-content-center mx-auto"
           variant="success"
           onClick={() => handleAddToCart(succulent)}
         >

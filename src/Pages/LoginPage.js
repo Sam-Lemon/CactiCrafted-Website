@@ -3,8 +3,13 @@ import loginImage from "../images/loginSucc.jpg";
 import LoginForm from "../Components/LoginForm";
 import RegForm from "../Components/RegForm";
 
+/**This is a login form that has a button at the bottom to 
+ * move over to the registration form if you don't already
+ * have an account.*/
 export default function LoginPage() {
   const [currentForm, setCurrentForm] = useState("login");
+
+
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);

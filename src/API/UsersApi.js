@@ -14,8 +14,9 @@ export const fetchUsers = async () => {
     }
 }
 
-export const postUser = async (id, name, email) => {
+export const postUser = async (name, email) => {
     try {
+        console.log('Sending user data:', { name, email });
         const resp = await fetch(API_USERS, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -24,7 +25,9 @@ export const postUser = async (id, name, email) => {
         if (!resp.ok) {
             throw new Error(`Failed to add user: ${resp.status} ${resp.statusText}`);
         }
-        return await resp.json();
+        const responseData = await resp.json();
+        console.log('Received response:', responseData);
+        return responseData;
     } catch(e) {
         console.error("Error adding user", e);
         throw e;

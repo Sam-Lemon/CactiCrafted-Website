@@ -68,7 +68,7 @@ export default function CartCard({
   quantity of the succulent and the price to calculate the total price. */}
           <Col md="3" lg="2" xl="2" className="offset-lg-1">
             <h5 className="mb-0">
-              {calcTotalPrice(cartSucculent.quantity, cartSucculent.price)}
+              ${calcTotalPrice(cartSucculent.quantity, cartSucculent.price)}
             </h5>
           </Col>
 

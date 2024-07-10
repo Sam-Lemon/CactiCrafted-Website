@@ -45,6 +45,7 @@ export default function NewsletterSignup() {
           <Form.Control
             type="name"
             placeholder="Name"
+            value={newsName}
             onChange={(e) => setNewsName(e.target.value)}
           />
         </Form.Group>
@@ -52,6 +53,7 @@ export default function NewsletterSignup() {
           <Form.Control
             type="email"
             placeholder="Email"
+            value={newsEmail}
             onChange={(e) => setNewsEmail(e.target.value)}
           />
         </Form.Group>

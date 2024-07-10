@@ -11,6 +11,11 @@ export default function App() {
     document.body.style.backgroundColor = "#E2E2E4";
   });
 
+
+  /**This is what renders on the page, the Navbar is controlled
+   * by the React Router. The NavBar is the only component in this
+   * file because it's the only component I want on every page 
+   * of the website.*/
   return (
     <>
       <Router>

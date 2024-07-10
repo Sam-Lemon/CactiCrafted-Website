@@ -30,12 +30,15 @@ export default function CartPage() {
     }
   };
 
-  /**Deleting a cart item. */
+  /**Deleting a cart item by using the deleteCartSucculent function which is an 
+   *API call.*/
   const handleDeleteCartItem = async (id) => {
     try {
       await deleteCartSucculent(id);
       console.log(`Deleted cart succulent with ID: ${id}`);
 
+  /**This function updates the state of the cart items to not
+   * include the deleted succulent.*/
       setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
     } catch (e) {
       console.error("Error deleting cart succulent", e);
@@ -43,6 +46,12 @@ export default function CartPage() {
     }
   };
 
+  /**This function takes the parameters, id and newQuantity and use them to
+   * update the currently quantity of a succulent in the cart. Using the
+   * setter function setCartItems, updates the state of the object. Each of the
+   * prevItems is mapped over, and if the id matches the provided id, it creates
+   * a copy of the object with the quantity property updated to whatever the
+   * newQuantity is.*/
   const handleUpdateQuantity = (id, newQuantity) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -51,6 +60,7 @@ export default function CartPage() {
     );
   };
 
+  /**Fetching the cartItems. */
   useEffect(() => {
     fetchCartItems();
   }, []);
