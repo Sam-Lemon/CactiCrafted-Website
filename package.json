@@ -2,16 +2,21 @@
   "name": "react",
   "version": "0.0.0",
   "private": true,
+  "homepage": "http://Sam-Lemon.github.io/CactiCrafted-Website",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.1.1",
     "mdbreact": "^5.2.0",
     "react": "^17",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^17",
-    "react-router-dom": "5.3"
+    "react-router-dom": "5.3",
+    "save-dev": "^0.0.1-security"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
