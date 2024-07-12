@@ -75,7 +75,6 @@ a {
    text-align: center;
 }
 
-
 /*******LoginForm Component*******/
 .login-form, .reg-form {
    background-color: #F7F3F9;
@@ -96,8 +95,6 @@ a {
    color: #F7F3F9;
    border-color: #F7F3F9;
 }
-
-
 
 /*****PRODUCT CARD COMPONENT*****/
 .product-card {
