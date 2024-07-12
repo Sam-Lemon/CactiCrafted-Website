@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/CactiCrafted-Website/static/css/main.d524b40e.css",
+    "main.js": "/CactiCrafted-Website/static/js/main.4dee22ff.js",
+    "static/media/fa-solid-900.svg": "/CactiCrafted-Website/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/loginSucc.jpg": "/CactiCrafted-Website/static/media/loginSucc.b785190c8e80aaba8d01.jpg",
+    "static/media/fa-brands-400.svg": "/CactiCrafted-Website/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/logo-transparent-png.png": "/CactiCrafted-Website/static/media/logo-transparent-png.03965d90d4350ad38f20.png",
+    "static/media/succ-bkg.jpg": "/CactiCrafted-Website/static/media/succ-bkg.03178c74b5ea876f828c.jpg",
+    "static/media/cartSucculent.jpg": "/CactiCrafted-Website/static/media/cartSucculent.fbc6c6d44ceb134c7569.jpg",
+    "static/media/fa-solid-900.eot": "/CactiCrafted-Website/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/fa-solid-900.ttf": "/CactiCrafted-Website/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/fa-regular-400.svg": "/CactiCrafted-Website/static/media/fa-regular-400.4689f52cc96215721344.svg",
+    "static/media/fa-brands-400.eot": "/CactiCrafted-Website/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
+    "static/media/fa-brands-400.ttf": "/CactiCrafted-Website/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/fa-solid-900.woff": "/CactiCrafted-Website/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
+    "static/media/fa-brands-400.woff": "/CactiCrafted-Website/static/media/fa-brands-400.2285773e6b4b172f07d9.woff",
+    "static/media/fa-solid-900.woff2": "/CactiCrafted-Website/static/media/fa-solid-900.1551f4f60c37af51121f.woff2",
+    "static/media/fa-brands-400.woff2": "/CactiCrafted-Website/static/media/fa-brands-400.d878b0a6a1144760244f.woff2",
+    "static/media/fa-regular-400.eot": "/CactiCrafted-Website/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
+    "static/media/fa-regular-400.ttf": "/CactiCrafted-Website/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/fa-regular-400.woff": "/CactiCrafted-Website/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
+    "static/media/fa-regular-400.woff2": "/CactiCrafted-Website/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
+    "index.html": "/CactiCrafted-Website/index.html",
+    "main.d524b40e.css.map": "/CactiCrafted-Website/static/css/main.d524b40e.css.map",
+    "main.4dee22ff.js.map": "/CactiCrafted-Website/static/js/main.4dee22ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d524b40e.css",
+    "static/js/main.4dee22ff.js"
+  ]
+}
