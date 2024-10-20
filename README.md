@@ -11,7 +11,7 @@
 
 ## Tech Stack
 
-HTML, CSS, JavaScript, React-Bootstrap
+HTML, CSS, JavaScript, React-Bootstrap, RESTful API, React Router
 
 
 
